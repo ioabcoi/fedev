@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        /* 2021-04-01 목요일 PM 14:00 - 16:00
+
+        # var 
+
+        var a = 221;
+        var b = a - 5;
+        a = 4; // 재할당 O
+
+        var a = 221;
+        var b = a - 5;
+        var a = 4; // 재선언 O
+        
+        # let 변수
+
+        let a = 221;
+        let b = a - 5;
+        a = 4; // 재할당 O
+
+        let a = 221;
+        let b = a - 5;
+        let a = 4; // error 재선언 X
+
+        # const 상수 (변하지 않는 값)
+
+        const a = 221;
+        let b = a - 5;
+        a = 4; // error 재할당 X
+
+        const a = 221;
+        let b = a - 5;
+        const a = 4; // error 재선언 X
+
+        # type
+
+        const what = "Gu"; // string
+        const what = true; // boolean : true, false
+        const what = 9999; // number
+        const what = 99.9; // float
+        console.log(what);
+
+        ex)  
+        input checked="checked" (true) // X
+        input checked (true) // O
+
+        # array 배열
+
+        const mon = "Mon";
+        const tue = "Tue";
+        const wed = "Wed";
+        const thu = "Thu";
+        const fri = "Fri";
+        const sat = "Sat";
+        const sun = "Sun";
+        console.log(mon, tue, wed, thu, fri, sat, sun);
+
+        const daysOfWeek = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+        console.log(daysOfWeek);
+        console.log(daysOfWeek[2]); // Wed
+        console.log(daysOfWeek[999]); // undefined
+
+        const something = "something";
+        const guInfo = ["hyeji", 34, true, "omg!!", something];
+        console.log(guInfo);
+
+        # object 유사배열
+
+        const obj = { 
+            key : value
+        }
+
+        const guInfo = {
+            name : "hyeji",
+            age : "34",
+            gender : "female",
+            tired : false,
+            favMusician : ["Crush", "Paul kim"],
+            favMusic : [
+                {
+                    name : "Crush",
+                    title : "Beautiful"
+                },
+                {
+                    name : "Paul kim",
+                    title : "Every day, Every Moment"
+                } 
+            ]
+        };
+
+        console.log(guInfo);   
+        console.log(guInfo.name);
+        
+        guInfo.tired = true;
+        console.log(guInfo.tired);
+
+        console.log(guInfo.favMusician[0]);
+        console.log(guInfo.favMusic[1].title);
+
+        # function 함수
+
+        console.log(arg);  
+        // console : object
+        // log : function
+        // arg : argument
+
+        function sayHello(){
+            console.log("Hello!");
+        }
+        sayHello();
+        console.log("Hi!");
+
+        +
+        function sayHello(arg){
+            // console.log("Hello! " + arg);
+            console.log("Hello!", arg);
+        }
+        sayHello("Gu");
+        console.log("Hi!");
+
+        +
+        function sayHello(name, age){
+            console.log("Hello!", name, "! you have", age, "years of age.");
+        }
+        sayHello("Gu", 34);
+
+        
+        next.. 2.1.1 More Function Fun
+        */
+
+    </script>
+</body>
+
+</html>
