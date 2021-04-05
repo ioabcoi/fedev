@@ -36,9 +36,12 @@
         nodejs.js
 
         var http = require("http");
-        http.createServer(
-            res.writeHead(200, {"Content-Type" : "text/plain"})
-        ).listen(1337, "1270,0,1");
+        http.createServer(function(req, res){
+            res.writeHead(200, {"Content-Type" : "text/plain"});
+			res.write("Hello World/n");
+			res.end();
+        }).listen(1337, "127.0.0.1");
+		console.log("Server running at http://127.0.0.1:1337/");
 
         자바스크립트 기본
         https://opentutorials.org/course/743/6582
