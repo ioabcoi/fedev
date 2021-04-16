@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        /* 2021-04-13 화요일 PM 14:00 - 16:00
+
+        반복문의 제어 
+        https://opentutorials.org/course/743/4728
+        
+        break
+
+        for(var i = 0; i < 10; i++){
+            if(i === 5){
+                break;
+            }
+            document.write("coding everybody" + i + "<br/>");
+        }
+
+        continue
+
+        for(var i = 0; i < 10; i++){
+            if(i === 5){
+                continue;
+            }
+            document.write("coding everybody" + i + "<br/>");
+        }
+
+        반복문의 중첩
+
+        // 0부터 9까지 변수 i에 순차적으로 값을 할당
+        for(var i = 0; i < 10; i++){
+            // 0부터 9까지의 변수를 j의 값에 순차적으로 할당
+            for(var j = 0; j < 10; j++){
+                // i와 j의 값을 더한 후에 출력
+                // String은 숫자인 i와 j의 데이터 타입을 문자로 형태를 변환하는 명령이다.
+                // String()을 제거하고 실행해보면 의미가 좀 더 분명하게 드러날 것이다.
+                // document.write("coding everybody" + i + j + "<br/>");
+                document.write(String(i)+String(j)+ "<br/>");
+            }
+        }
+        for(var i = 0; i < 10; i++){
+            for(var j = 0; j < 10; j++){
+                document.write(String(i)+String(j)+ "<br/>");
+            }
+        }
+
+        함수 function
+        하나의 로직을 재실행 할 수 있도록 하는 것. 
+        코드의 재사용성. 유지보수의 용이. 코드의 가독성.
+        https://opentutorials.org/course/743/4729
+
+        function 함수명( [인자...[, 인자]] ){
+            코드
+            return 반환값
+        }
+
+        function numbering(){
+            document.write(1);
+        }
+        numbering();
+        // 1
+
+        function numbering(){
+            i = 0;
+            while(i < 10){
+                document.write(i + "<br/>");
+                i += 1;
+            }
+        }
+        numbering(); // 0123456789
+        numbering(); // 재사용
+        numbering(); // 재사용
+
+        for(var i = 0; i < 100; i++){
+            numbering();
+        }    
+
+        입력과 출력
+
+        function get_member1(){
+            return "Gu";
+        }
+        function get_member2(){
+            return "Ahn";
+        }
+        alert(get_member1()); // Gu
+        alert(get_member2()); // Ahn
+
+        function get_member(){
+            return "1";
+            return "2";
+            return "3";
+        }
+        alert(get_member()); // 1
+
+        인자 argument
+
+        function get_argument(arg){ // 매개변수 parameter
+            return arg;
+        }
+        alert(get_argument(1)); // 1
+        alert(get_argument(2)); // 2
+
+        function get_argument(arg){
+            return arg * 1000;
+        }
+        alert(get_argument(1)); // 1000
+        alert(get_argument(2)); // 2000
+
+        function get_arguments(arg1, arg2){
+            return arg1 + arg2;
+        }
+        alert(get_arguments(10, 20)); // 30
+        alert(get_arguments(20, 30)); // 50
+        
+        다양한 정의 방법
+    
+        function numbering(){
+            i = 0;
+            while(i < 10){
+                document.write(i + "<br/>");
+                i += 1;
+            }
+        }
+        numbering();
+
+        // numbering 이라는 변수에 함수를 대입
+        var numbering = function (){
+            i = 0;
+            while(i < 10){
+                document.write(i + "<br/>");
+                i += 1;
+            }
+        }
+        numbering();
+
+        // 익명 함수 : 정의 & 호출을 함께 실행 (일회성)
+        (function (){
+            i = 0;
+            while(i < 10){
+                document.write(i + "<br/>");
+                i += 1;
+            }
+        })();
+
+        배열 array
+        연관된 데이터를 모아서 통으로 관리하기 위하여 사용하는 데이터 타입.
+        여러개의 데이터를 하나의 변수에 저장하기 위한 것.
+        https://opentutorials.org/course/743/4736
+
+        var name = "Gu";
+        alert(name);
+
+        array[index]; 
+        변수명[색인];
+
+        var 변수명 = ["element", "원소"];
+                        0    ,    1  // index 색인
+
+        var member = ["Gu", "Hyeji", "GuHyeji"];
+        alert(member[0]); // Gu
+        alert(member[1]); // Hyeji
+        alert(member[2]); // GuHyeji
+
+        function get_members(){
+            return ["Gu", "Ahn"];
+        }
+        var members = get_members();
+        document.write(members[0]+ "<br/>"); // Gu
+        document.write(members[1]+ "<br/>"); // Ahn
+        document.write(members[0].toUpperCase()+ "<br/>"); // GU
+        document.write(members[1].toUpperCase()+ "<br/>"); // AHN
+
+        function get_members(){
+            return ["Gu", "Ahn", "Park", "Yoon"];
+        }
+        // members.length는 배열에 담긴 값의 숫자를 알려준다.
+        var members = get_members();
+        for(var i = 0; members.length; i++){
+            // members[i].toUpperCase()는 member[i]에 담긴 문자를 대문자로 변환해준다.
+            document.write(members[i].toUpperCase());
+            document.write("<br/>");
+        }
+
+        function get_members(){
+            return ["Gu", "Ahn", "Park", "Yoon"];
+        }
+        var members = get_members();
+        for(var i = 0; members.length; i++){
+            document.write(members[i].toUpperCase()+ "<br/>");
+        }
+
+        배열의 크기 length
+
+        var arr = [1, 2, 3, 4, 5];
+        alert(arr.length); // 5
+
+        배열의 끝에 원소를 추가 push
+        array.push(element);
+
+        var li = ["a", "b", "c", "d", "e"];
+        li.push("f");
+        console.log(li); // "a", "b", "c", "d", "e", "f"
+
+        배열에 복수의 원소를 추가 concat
+        array.concat([element1, element2]);
+
+        var li = ["a", "b", "c", "d", "e"];
+        li = li.concat(["f", "g"]);
+        console.log(li); // "a", "b", "c", "d", "e", "f", "g"
+
+        배열의 시작점에 원소를 추가 unshift
+        array.unshift(element);
+        
+        var li = ["a", "b", "c", "d", "e"];
+        li.unshift("z");
+        console.log(li); // "z", "a", "b", "c", "d", "e"
+
+        배열의 원하는 지점에 원소를 추가 splice
+        array.splice(index. howmany, element, ..., elementN);
+        howmany : index에서부터 제거될 원소들의 수
+        index부터 index+howmany에 해당하는 원소들은 삭제된다.
+        값이 0이면 어떠한 원소도 삭제되지 않는다.
+
+        var li = ["a", "b", "c", "d", "e"];
+        li.splice(2, 0, "B");
+        console.log(li); // "a", "b", "B", "c", "d", "e"
+
+        var a = ["a", "b", "c"];
+        a.splice(1, 1, "x", "y");
+        console.log(a); // "a", "x", "y", "c"
+
+        
+        next.. 배열의 제거와 정렬
+        배열의 첫번째 원소를 제거 shift
+        배열의 마지막 원소를 제거 pop
+        */
+
+    </script>
+</body>
+
+</html>
