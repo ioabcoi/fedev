@@ -1,14 +1,17 @@
 # fedev
-Front end developer
+## Front end developer
 
-* codingEverybody
+### codingEverybody
 
-(이론) 생활코딩
+#### (이론) 생활코딩
 https://opentutorials.org/course/743
+
 https://www.youtube.com/watch?v=PZIPsKgWJiw&list=PLuHgQVnccGMA4uSig3hCjl7wTDeyIeZVU
 
-* javascriptForBeginners 
+### javascriptForBeginners 
 
-(실습) nomadcoders
+#### (실습) nomadcoders
 https://nomadcoders.co/javascript-for-beginners
+
 https://www.youtube.com/watch?v=wUHncG3VwPw&list=PLLUCyU7SBaR7tOMe-ySJ5Uu1UlEBznxTr
+
