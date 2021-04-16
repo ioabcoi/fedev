@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        /* 2021-04-06 화요일 PM 14:00 - 16:00
+
+        비교연산자
+        https://opentutorials.org/course/743/4722
+
+        동등연산자 equal operator ==
+
+        console.log(1 == 2); // false
+        console.log(1 == 1); // true
+        console.log(1 == "1"); // true 
+        console.log("one" == "two"); // false
+        console.log("one" == "one"); // true
+
+        일치연산자 strict equal operator === (추천!!)
+
+        console.log(1 === 2); // false
+        console.log(1 === 1); // true
+        console.log(1 === "1"); // false 
+        console.log("one" === "two"); // false
+        console.log("one" === "one"); // true
+
+        var a;
+        console.log(a); // undefined (값이 정의되지 않음)
+
+        var a = null;
+        console.log(a); // null (값이 없음)
+
+        console.log(undefined == null); // true
+        console.log(undefined === null); // false
+        console.log(true == 1); // true (1)
+        console.log(true == 1); // false (1이 아닌 수)
+        console.log(true == "1"); // true
+        console.log(true === "1"); // false
+
+        console.log(0 === -0); // true
+        console.log(Nan === Nan); // false, Nan (계산할 수 없음)
+
+        Data type
+        Boolean true false
+        Number .. -1 0 1 ..
+        String "a" "b" "c"
+        Undefined undefined
+        Null null
+
+        참고 : === 를 사용하자!!!
+        https://dorey.github.io/JavaScript-Equality-Table/
+
+        != 부정
+
+        console.log(1 != 2); // true
+        console.log(1 != 1); // false
+        console.log("one" != "two"); // true
+        console.log("one" != "two"); // false
+
+        >
+        console.log(10 > 20); // false
+        console.log(10 > 1); // true
+        console.log(10 > 10); // false
+
+        >=
+        console.log(10 >= 20); // false
+        console.log(10 >= 1); // true
+        console.log(10 >= 10); // true
+        
+        조건문 conditional statement
+        https://opentutorials.org/course/743/4724
+
+        Boolean : true / false
+        
+        if(true){
+            console.log("result : true"); // 실행 O
+        }
+
+        if(false){
+            console.log("result : true"); // 실행 X
+        }
+
+        if(true){
+            console.log(1);
+            console.log(2);
+        }
+        console.log(3); // 123
+
+        if(false){
+            console.log(1);
+            console.log(2);
+        }
+        console.log(3); // 3
+
+        if(true){
+            console.log(1); // 1
+        }else{
+            console.log(2);
+        }
+        
+        if(false){
+            console.log(1);
+        }else{
+            console.log(2); // 2
+        }
+
+        if(false){
+            console.log(1);
+        }else if(true){
+            console.log(2); // 2
+        }else if(true){
+            console.log(3);
+        }else{
+            console.log(4);
+        }
+
+        if(false){
+            console.log(1);
+        }else if(false){
+            console.log(2);
+        }else if(true){
+            console.log(3); // 3
+        }else{
+            console.log(4);
+        }
+
+        if(false){
+            console.log(1);
+        }else if(false){
+            console.log(2);
+        }else if(false){
+            console.log(3);
+        }else{
+            console.log(4); // 4
+        }
+
+        a = 1;
+        if(a === 1){
+            console.log(1);
+        }
+
+        prompt("당신의 나이는?");
+        alert(prompt("당신의 나이는?"));
+        alert(prompt("당신의 나이는?") * 10);
+
+        var id = prompt("아이디를 입력해주세요.");
+        if(id === "ioabcoi"){
+            var password = prompt("비밀번호를 입력해주세요.");
+            if(password === "999"){
+                alert("로그인 완료! " + id + "님 안녕하세요!");
+            }else{
+                alert("비밀번호가 일치하지 않습니다.")
+            }
+            alert("아이디가 일치합니다.");
+        }else{
+            alert("아이디가 일치하지 않습니다.");
+        }
+
+        && and
+
+        if(true && true){
+            console.log(1); // 1
+        }
+        if(true && false){
+            console.log(2);
+        }
+        if(false && true){
+            console.log(3);
+        }
+        if(false && false){
+            console.log(4);
+        }
+
+        || or
+
+        if(true || true){
+            console.log(1); // 1
+        }
+        if(true || false){
+            console.log(2); // 2
+        }
+        if(false || true){
+            console.log(3); // 3
+        }
+        if(false || false){
+            console.log(4);
+        }
+
+        var id = prompt("아이디를 입력해주세요.");
+        var password = prompt("비밀번호를 입력해주세요.");
+        if(id === "ioabcoi" || id === "GU" && password === "999"){
+            alert("로그인 완료! " + id + "님 안녕하세요!");
+        }else{
+            alert("로그인에 실패 했씁니다.")
+        }
+
+        ! 부정
+        
+        if(!true && !true){
+            console.log(1);
+        }
+        if(!false && !true){
+            console.log(2);
+        }
+        if(!true && !false){
+            console.log(3);
+        }
+        if(!false && !false){
+            console.log(4); // 4
+        }
+
+        Boolean
+
+        if(0){
+            console.log(1);
+        }
+        if(1){
+            console.log(2); // 2
+        }
+
+        Etc
+
+        if(""){
+            console.log("빈 문자열은 true"); // 실행 X
+        }
+        if(!""){
+            console.log("빈 문자열은 false"); // 실행 O
+        }
+
+        if(undefined){
+            console.log("undefined는 true"); // 실행 X
+        }
+        if(!undefined){
+            console.log("undefined는 false"); // 실행 O
+        }
+
+        var a;
+        if(a){
+            console.log("값이 할당되지 않은 변수는 true"); // 실행 X
+        }
+        if(!a){
+            console.log("값이 할당되지 않은 변수는 false"); // 실행 O 
+        }
+
+        if(null){
+            console.log("null은 true"); // 실행 X
+        }
+        if(!null){
+            console.log("null은 false"); // 실행 O
+        }
+
+        if(NaN){
+            console.log("NaN은 true"); // 실행 X
+        }
+        if(!NaN){
+            console.log("NaN은 false"); // 실행 O
+        }
+        
+        빈 문자열 false
+        undefined false
+        값이 할당되지 않음 false
+        NaN false
+
+        반복문
+        https://opentutorials.org/course/743/4728
+
+        while ~ 하는 동안
+
+        while(조건){
+            반복해서 실행할 코드
+        }
+
+        Hello World! <br/>
+        Hello World! <br/>
+        Hello World! <br/>
+
+        document.write("Coding Everybody <br/>");
+
+        while(true){
+            document.write("Coding Everybody <br/>");
+        }
+
+        while(false){
+            document.write("Coding Everybody <br/>");
+        }
+
+        var i = 0; // 종료조건으로 i의 값이 10보다 작다면 true, 크다면 false
+        while(i < 10){
+            document.write("Coding Everybody " + i + "<br/>"); // 반복문이 실행될 때마다 출력
+            i++; // i = i + 1; i의 값이 1씩 증가
+        }
+
+        for ~ 하는 동안
+
+        for(초기화; 반복조건; 반복이 될 때마다 실행되는 코드){
+            반복해서 실행될 코드
+        }
+
+        for(var i = 0; i < 10; i++){
+            document.write("Coding Everybody " + i + "<br/>");
+        }
+
+        i = i + 1;
+        i++;
+        ++i;
+
+        i = 0;
+        alert(i++); i = 0 alert 이후에 ++
+
+        i = 0;
+        alert(++i); ++ alert 이후에 i = 1
+
+
+        next.. 반복문의 제어 break
+        */
+
+    </script>
+</body>
+
+</html>
