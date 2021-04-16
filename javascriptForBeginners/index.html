@@ -2,19 +2,36 @@
 <html>
 
 <head>
-    <title>Something</title>
-    <link href="index.css" rel="stylesheet" type="text/css" />
+	<title>Something</title>
+	<meta charset="">
+	<link href="index.css" rel="stylesheet" type="text/css" />
 
 
 </head>
 
 <body>
-
-    <div>
-        Create
-
-    </div>
-    <script src="index.js" type="text/javascript"></script>
+	<div class="wrap">
+		<h1 id="title" class="btn">Hello!!!</h1>
+		<div class="clock js-clock">
+			<h2>00:00:00</h2>
+		</div>
+		<form class="name js-name">
+			<input type="text" placeholder="What is your name?" />
+		</form>
+		<h3 class="greetings js-greetings">Hello</h3>
+		<form class="toDoForm js-toDoForm">
+			<input type="text" placeholder="Write a to do" />
+		</form>
+		<ul class="toDoList js-toDoList">
+		</ul>
+		<span class="weather js-weather"></span>   
+	</div>
+	<script src="index.js" type="text/javascript"></script>
+	<script src="clock.js" type="text/javascript"></script>
+	<script src="todo.js" type="text/javascript"></script>
+	<script src="greeting.js" type="text/javascript"></script>
+	<script src="background.js" type="text/javascript"></script>
+	<script src="weather.js" type="text/javascript"></script>
 </body>
 
 </html>
