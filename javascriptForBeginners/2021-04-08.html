@@ -24,7 +24,7 @@
         const plus = calculator.plus(5, 5);
         console.log(plus);
 
-        ex) index.js
+        # index.js
 
         // const title = document.getElementById("title");
         const title = document.querySelector("#title");
@@ -49,7 +49,7 @@
         }
         window.addEventListener("click", handleClick);
 
-        ex) console
+        # console
 
         if(10 === "10"){
             console.log("hi");
@@ -76,7 +76,6 @@
         false || false = false;
 
         const age = prompt("How old are you");
-        // console.log(age);
         if(age >= 18 && age <= 21){
             console.log("you can drunk but you should not");
         }else if(age > 21){
@@ -85,69 +84,66 @@
             console.log("you cant");
         }
 
-        # event : index.js
+        # index.js
 
-const title = document.querySelector("#title");
-const BASE_COLOR = "rgba(255, 255, 0, 0.8)";
-const OTHER_COLOR = "#ff0000";
-function handleClick(){
-    const currentColor = title.style.color;
-    if(currentColor === BASE_COLOR){
-        title.style.color = OTHER_COLOR;
-    }else{
-        title.style.color = BASE_COLOR;
-    }
-}
-function init(){
-    title.style.color = BASE_COLOR;
-    window.addEventListener("click", handleClick);            
-}
-init();
+        const title = document.querySelector("#title");
+        const BASE_COLOR = "rgba(255, 255, 0, 0.8)";
+        const OTHER_COLOR = "#ff0000";
+        function handleClick(){
+            const currentColor = title.style.color;
+            if(currentColor === BASE_COLOR){
+                title.style.color = OTHER_COLOR;
+            }else{
+                title.style.color = BASE_COLOR;
+            }
+        }
+        function init(){
+            title.style.color = BASE_COLOR;
+            title.addEventListener("click", handleClick);            
+        }
+        init();
+
+        # add, remove
         
+        const title = document.querySelector("#title");
+        const CLICKED_CLASS = "clicked";
+        function handleClick(){
+            const hasClass = title.classList.contains(CLICKED_CLASS);
+            if(!hasClass){
+                title.classList.add(CLICKED_CLASS);
+            }else{
+                title.classList.remove(CLICKED_CLASS);
+            }
+        }
+        function init(){
+            title.addEventListener("click", handleClick);            
+        }
+        init();
 
-# add, remove
-const title = document.querySelector("#title");
-const CLICKED_CLASS = "clicked";
-function handleClick(){
-    // const currentClass = title.className;
-    const hasClass = title.classList.contains(classList);
-    // if(currentClass !== CLICKED_CLASS){
-        // title.className = CLICKED_CLASS;
-        title.classList.add(CLICKED_CLASS);
-    }else{
-        // title.className = "";
-        title.classList.remove(classList);
-    }
-}
-function init(){
-    window.addEventListener("click", handleClick);            
-}
-init();
+        # toggle
 
-    # toggle
-    const title = document.querySelector("#title");
-    const CLICKED_CLASS = "clicked";
-    function handleClick(){
-        title.classList.toggle(CLICKED_CLASS);
-    }
-    function init(){
-        window.addEventListener("click", handleClick);            
-    }
-    init();
+        const title = document.querySelector("#title");
+        const CLICKED_CLASS = "clicked";
+        function handleClick(){
+            title.classList.toggle(CLICKED_CLASS);
+        }
+        function init(){
+            title.addEventListener("click", handleClick);            
+        }
+        init();
 
+        function handleOffline(){
+            console.log("lalalala");
+        }
+        function handleOnline(){
+            console.log("online");
+        }
+        navigator.addEventListener("offLine", handleOffline);
+        navigator.addEventListener("onLine", handleOnline);
 
-function handleOffline(){
-    console.log("lalalala");
-}
-function handleOnline(){
-    console.log("online");
-}
-navigator.addEventListener("offLine", handleOffline);
-navigator.addEventListener("onLine", handleOnline);
+        https://developer.mozilla.org/ko/docs/Web/API/Event
 
-https://developer.mozilla.org/ko/docs/Web/API/Event
-
-        # date : clock.js
+        # clock.js
 
         const date = new Date();
         console.log(date);
@@ -156,12 +152,12 @@ https://developer.mozilla.org/ko/docs/Web/API/Event
         console.log(date.getMinutes());
         console.log(date.getSeconds());
 
-        # localStorage : gretting.js
+        # gretting.js
 
         localStorage.setItem("Gu", ":-)");
         localStorage.getItem("Gu");
 
-        
+
         next.. 3-4 saving the user name part two
         */
 
