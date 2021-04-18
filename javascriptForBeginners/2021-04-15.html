@@ -12,10 +12,34 @@
 
 		https://github.com/nomadcoders/js-basics
 
-        greeting.js
-        todo.js
-		background.js
-        weather.js
+        # todo.js
+
+        filter();
+        Array.prototype.filter();
+        주어진 함수의 테스트를 통과하는 모든 요소를 모아 새로운 배열로 반환합니다.
+        https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+
+        parseInt();
+        함수는 문자열 인자를 구문분석하여 특정 진수(수의 진법 체계에 기준이 되는 값)의 정수를 반환합니다.
+        https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/parseInt
+
+        JSON.parse();
+        메서드는 JSON 문자열의 구문을 분석하고, 그 결과에서 JavaScript 값이나 객체를 생성합니다. 
+        선택적으로, reviver 함수를 인수로 전달할 경우, 결과를 반환하기 전에 변형할 수 있습니다.
+        https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse
+
+        const cleanToDos = toDos.filter(function(toDo){
+            return toDo.id !== parseInt(li.id);
+        });
+        toDos = cleanToDos;
+
+        const parsedToDos = JSON.parse(loadedToDo);
+        parsedToDos.forEach(function(toDo){
+            paintToDo(toDo.text);
+        });
+        
+		# background.js
+        # weather.js
 
         next.. 
         */
