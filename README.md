@@ -13,5 +13,7 @@ https://www.youtube.com/watch?v=PZIPsKgWJiw&list=PLuHgQVnccGMA4uSig3hCjl7wTDeyIe
 #### 실습 - nomadcoders
 https://nomadcoders.co/javascript-for-beginners
 
+https://github.com/nomadcoders/js-basics
+
 https://www.youtube.com/watch?v=wUHncG3VwPw&list=PLLUCyU7SBaR7tOMe-ySJ5Uu1UlEBznxTr
 
