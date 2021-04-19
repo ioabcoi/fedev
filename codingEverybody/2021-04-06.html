@@ -38,12 +38,12 @@
         console.log(undefined == null); // true
         console.log(undefined === null); // false
         console.log(true == 1); // true (1)
-        console.log(true == 1); // false (1이 아닌 수)
+        console.log(true == 0); // false (1이 아닌 수)
         console.log(true == "1"); // true
-        console.log(true === "1"); // false
+        console.log(true === "0"); // false
 
         console.log(0 === -0); // true
-        console.log(Nan === Nan); // false, Nan (계산할 수 없음)
+        console.log(NaN === NaN); // false, NaN (계산할 수 없음)
 
         Data type
         Boolean true false
@@ -264,6 +264,7 @@
         빈 문자열 false
         undefined false
         값이 할당되지 않음 false
+        null false
         NaN false
 
         반복문
