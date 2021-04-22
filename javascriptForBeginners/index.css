@@ -1,22 +1,30 @@
+html, body, h1, h2, h3 {padding:0;margin:0;}
 body {background:#000;color:#fff;}
+div, input[type="text"] {box-sizing:border-box;}
 
-.wrap {position:relative;z-index:1;text-align:center;}
-.wrap input[type="text"] {width:300px;height:30px;padding:0 10px;margin:10px 0;border:1px solid #fff;background:rgba(255,255,255,0.5);color:#000;font-size:12px;}
+.bgImage {position:absolute;left:0;top:0;right:0;bottom:0;width:100%;height:100%;}
+
+.wrap {position:relative;z-index:1;padding:100px 20px;text-align:center;}
+.wrap input[type="text"] {display:block;width:100%;height:40px;padding:5px 10px;margin:10px 0;border:2px solid #fff;background:rgba(255,255,255,0.5);color:#000;font-size:16px;}
+
+#title {position:absolute;left:20px;top:20px;width:90px;height:30px;margin:0;padding:10px 10px 5px 10px;background:rgba(255,255,255,0.3);border:2px solid #fff;border-radius:15px;-webkit-border-radius:15px;font-size:20px;line-height:30px;text-align:center;}
 
 .btn {cursor:pointer;}
 .clicked {color:#00f;}
 
-.clock {font-size:20px;}
+.clock h2 {position:absolute;right:20px;top:20px;width:90px;height:30px;margin:0;padding:10px 10px 5px 10px;background:rgba(255,255,255,0.3);border:2px solid #fff;border-radius:15px;-webkit-border-radius:15px;font-size:16px;line-height:30px;text-align:center;}
+
+.greetings {padding:10px 0;font-size:20px;}
 
 .name,
 .greetings {display:none;}
 .showing {display:block;}
 
-.toDoList {width:300px;margin:0 auto;text-align:left;}
-.toDoList li {margin:5px 0;}
+.toDoList {width:100%;margin:0 auto;padding-left:20px;text-align:left;}
+.toDoList li {margin:5px 0;font-size:18px;}
 .toDoList li button {margin-left:10px;}
 
-.weather {}
+.weather {position:absolute;left:0;bottom:20px;display:block;width:100%;font-size:16px;text-align:center}
 
 @keyframes fadeIn {
 	from {opacity:0;}

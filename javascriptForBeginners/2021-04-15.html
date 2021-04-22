@@ -45,6 +45,12 @@
 
         # weather.js
 
+        https://openweathermap.org/
+        https://openweathermap.org/current
+        https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=40f419375d167344e50226d2f84303a9
+        https://api.openweathermap.org/data/2.5/weather?q={city name},{state code},{country code}&appid={API key}
+
+
         function getWeather(lat, lng){
             fetch(`https://url&lat=${lat}&lon=${lng}&appid=${API_KEY}&units=metrics`
             ).then(function(response){

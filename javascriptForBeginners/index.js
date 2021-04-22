@@ -1,4 +1,6 @@
 const title = document.querySelector("#title");
+const wrap = document.querySelector(".wrap");
+
 const CLICKED_CLASS = "clicked";
 
 function handleClick(){
@@ -6,7 +8,7 @@ function handleClick(){
 }
 
 function init(){
-    title.addEventListener("click", handleClick);            
+    title.addEventListener("click", handleClick);
 }
 
 init();

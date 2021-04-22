@@ -8,12 +8,15 @@ function paintImage(imgNumber){
     image.classList.add("bgImage");
     body.prepend(image);
 }
+
 function getRandom(){
     const number = Math.floor(Math.random() * IMG_NUMBER);
     return number;
 }
+
 function init(){
     const randomNumber = getRandom();
     paintImage(randomNumber);
 }
+
 init();

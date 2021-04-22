@@ -1,13 +1,10 @@
 const weather = document.querySelector(".js-weather");
 
-// https://openweathermap.org/
 const API_KEY = "40f419375d167344e50226d2f84303a9";
 const COORDS = "coords";
 
-// https://openweathermap.org/current
-function getWeather(lat, lng){
-    // api.openweathermap.org/data/2.5/weather?q={city name},{state code},{country code}&appid={API key}
-    fetch(`https://pi.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=metrics`
+function getWeather(lat, lon){
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
     ).then(function(response){
         return response.json();
     }).then(function(json){
@@ -40,17 +37,18 @@ function askForCoords(){
     navigator.geolocation.getCurrentPosition(handleGeoSucces, handleGeoError);
 }
 
-function loadCords(){
-    const loadedCords = localStorage.getItem(COORDS);
-    if(loadCords === null){
+function loadCoords(){
+    const loadedCoords = localStorage.getItem(COORDS);
+    if(loadedCoords === null){
         askForCoords();
     }else{
-        const parseCoords = JSON.parse(loadedCords);
+        const parseCoords = JSON.parse(loadedCoords);
         getWeather(parseCoords.latitude, parseCoords.longitude);
     }
 }
 
 function init(){
-    loadCords();
+    loadCoords();
 }
+
 init();
