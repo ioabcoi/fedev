@@ -89,6 +89,7 @@ var hi = function(){
 numbering();
 
 // 익명 함수 : 정의 & 호출을 함께 실행 (일회성)
+// 즉시 실행 함수 표현(IIFE, Immediately Invoked Function Expression)은 정의되자마자 즉시 실행되는 Javascript Function 를 말한다.
 (function (){
     console.log("hello!");
 })();
