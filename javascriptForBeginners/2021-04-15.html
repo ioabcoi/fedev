@@ -39,8 +39,30 @@
         });
         
         # background.js
+
+        const image = new Image();
+        const number = Math.floor(Math.random() * 10);
+
         # weather.js
 
+        function getWeather(lat, lng){
+            fetch(`https://url&lat=${lat}&lon=${lng}&appid=${API_KEY}&units=metrics`
+            ).then(function(response){
+                return response.json();
+            }).then(function(json){
+                const temperature = json.main.temp;
+                const place = json.name;
+                weather.innerText = `${temperature} @ ${place}`;
+            });
+        }
+
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        const coordsObj = {
+            latitude,
+            longitude
+        };
+        
         
         next.. 
         */
