@@ -152,7 +152,7 @@ information["birth"] // 1228
 
 객체에는 객체를 담을 수도 있고, 함수를 담을 수도 있다.
 
-var grades = {
+var information = {
     "list" : {
         "gu" : 9,
         "hyeji" : 34,
@@ -162,10 +162,10 @@ var grades = {
         alert("Hello!");
     }
 };
-console.log(grades["list"]); // {"gu" : 9, "hyeji" : 34, "birth" : 1228}
-console.log(grades["list"]["gu"]); // 9
-grades["show"](); // alert("Hello!");
-grades.show(); // alert("Hello!");
+console.log(information["list"]); // {"gu" : 9, "hyeji" : 34, "birth" : 1228}
+console.log(information["list"]["gu"]); // 9
+information["show"](); // alert("Hello!");
+information.show(); // alert("Hello!");
 
 
 - 모듈
