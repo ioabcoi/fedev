@@ -206,9 +206,8 @@ function isBigEnough(value) {
 }
 var filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
 // filtered 는 [12, 130, 44]
-
-[MDN : Array.filter](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/filter, "Array.filter")
 ```
+[MDN : Array.filter](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/filter, "Array.filter")
 
 ## parseInt();
 ```javascript 
@@ -220,9 +219,8 @@ parseInt(string, radix);
 parseInt(4.7, 10)
 parseInt(4.7 * 1e22, 10)        // 매우 큰 숫자가 4가 됨
 parseInt(0.00000000000434, 10)  // 매우 작은 숫자가 4가 됨
-
-[MDN : parseInt](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/parseInt, "parseInt")
 ```
+[MDN : parseInt](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/parseInt, "parseInt")
 
 ## JSON.parse();
 ```javascript 
@@ -236,9 +234,8 @@ JSON.parse('true');            // true
 JSON.parse('"foo"');           // "foo"
 JSON.parse('[1, 5, "false"]'); // [1, 5, "false"]
 JSON.parse('null');            // null
-
-[MDN : JSON.parse](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse, "JSON.parse")
 ```
+[MDN : JSON.parse](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse, "JSON.parse")
 
 ## openweathermap
 ```javascript  
