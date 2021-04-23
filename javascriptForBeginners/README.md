@@ -1,5 +1,6 @@
 # javascriptForBeginners
 
+Link : [GU : javascriptForBeginners](https://ioabcoi.github.io/fedev/javascriptForBeginners/ "javascriptForBeginners")
 
 ## var 
 ```javascript
