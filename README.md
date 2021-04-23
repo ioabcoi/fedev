@@ -1,4 +1,5 @@
 # fedev
+https://ioabcoi.github.io/fedev/
 ## Front end developer
 ### codingEverybody
 #### 이론 : 생활코딩
@@ -21,8 +22,8 @@ https://github.com/nomadcoders/js-basics
 
 https://www.youtube.com/watch?v=wUHncG3VwPw&list=PLLUCyU7SBaR7tOMe-ySJ5Uu1UlEBznxTr
 
-### vuejs-step01
-#### 실습 : vue.js 시작하기 - Age of vue.js
+### learnVueJs
+#### 실습 : 캡틴판교 : vue.js 시작하기 - Age of vue.js
 
 https://www.inflearn.com/course/Age-of-Vuejs/lecture/21395?tab=curriculum
 
