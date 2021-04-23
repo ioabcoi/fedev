@@ -193,7 +193,7 @@ localStorage.getItem("Gu");
 const image = new Image();
 ```
 
-## filter(); 
+## Array.filter();
 ```javascript  
 주어진 함수의 테스트를 통과하는 모든 요소를 모아 새로운 배열로 반환합니다.
 
@@ -207,7 +207,7 @@ function isBigEnough(value) {
 var filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
 // filtered 는 [12, 130, 44]
 
-https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+[MDN : Array.filter](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/filter, "Array.filter")
 ```
 
 ## parseInt();
@@ -221,7 +221,7 @@ parseInt(4.7, 10)
 parseInt(4.7 * 1e22, 10)        // 매우 큰 숫자가 4가 됨
 parseInt(0.00000000000434, 10)  // 매우 작은 숫자가 4가 됨
 
-https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/parseInt
+[MDN : parseInt](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/parseInt, "parseInt")
 ```
 
 ## JSON.parse();
@@ -237,7 +237,7 @@ JSON.parse('"foo"');           // "foo"
 JSON.parse('[1, 5, "false"]'); // [1, 5, "false"]
 JSON.parse('null');            // null
 
-https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse
+[MDN : JSON.parse](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse, "JSON.parse")
 ```
 
 ## openweathermap
