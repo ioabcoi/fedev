@@ -1,39 +1,43 @@
 # fedev
-https://ioabcoi.github.io/fedev/
-## Front end developer
-### codingEverybody
-#### 이론 : 생활코딩
-https://opentutorials.org/course/743
 
-https://www.youtube.com/watch?v=PZIPsKgWJiw&list=PLuHgQVnccGMA4uSig3hCjl7wTDeyIeZVU
+Link : [GU | fedev](https://ioabcoi.github.io/fedev/ "fedev")
 
-### javascriptFlow
-#### 이론 : javascript 핵심 개념 알아보기 - JS Flow
+## codingEverybody
+### 이론 : 생활코딩
 
-### javascriptES6+
-#### 이론 : javascript ES6+ 제대로 알아보기 - 초급
-#### 이론 : javascript ES6+ 제대로 알아보기 - 중급
+Link : [생활코딩](https://ioabcoi.github.io/fedev/ "생활코딩")
 
-### javascriptForBeginners 
-#### 실습 : nomadcoders
-https://nomadcoders.co/javascript-for-beginners
+Link : [youtube | 생활코딩 ](https://www.youtube.com/watch?v=PZIPsKgWJiw&list=PLuHgQVnccGMA4uSig3hCjl7wTDeyIeZVU "youtube | 생활코딩")
 
-https://github.com/nomadcoders/js-basics
+## javascriptFlow
+### 이론 : javascript 핵심 개념 알아보기 - JS Flow
 
-https://www.youtube.com/watch?v=wUHncG3VwPw&list=PLLUCyU7SBaR7tOMe-ySJ5Uu1UlEBznxTr
+## javascriptES6+
+### 이론 : javascript ES6+ 제대로 알아보기 - 초급
+### 이론 : javascript ES6+ 제대로 알아보기 - 중급
 
-### learnVueJs
-#### 실습 : 캡틴판교 : vue.js 시작하기 - Age of vue.js
+## javascriptForBeginners 
+### 실습 : nomadcoders
 
-https://www.inflearn.com/course/Age-of-Vuejs/lecture/21395?tab=curriculum
+Link : [nomadcoders](https://nomadcoders.co/javascript-for-beginners "nomadcoders")
 
-https://joshua1988.github.io/vue-camp/
+Link : [github | nomadcoders](https://github.com/nomadcoders/js-basics "github | nomadcoders")
 
-https://github.com/joshua1988/learn-vue-js
+Link : [youtube | nomadcoders](https://www.youtube.com/watch?v=wUHncG3VwPw&list=PLLUCyU7SBaR7tOMe-ySJ5Uu1UlEBznxTr "youtube | nomadcoders")
 
-https://kr.vuejs.org/v2/guide/
+## learnVueJs
+### 실습 : 캡틴판교 : vue.js 시작하기 - Age of vue.js
 
-vscode plugin
+Link : [inflearn | 캡틴판교](https://www.inflearn.com/course/Age-of-Vuejs/lecture/21395?tab=curriculum "inflearn | 캡틴판교")
+
+Link : [github | 캡틴판교](https://github.com/joshua1988/learn-vue-js "github | 캡틴판교")
+
+Link : [github | 캡틴판교 | Cracking Vue.js](https://joshua1988.github.io/vue-camp/ "github | 캡틴판교 | Cracking Vue.js")
+
+Link : [guide | vue.js](https://kr.vuejs.org/v2/guide/ "guide | vue.js")
+
+#### vscode plugin
+
 - Vetur
 - Night Owl
 - Material Icon Theme
@@ -43,11 +47,11 @@ vscode plugin
 - Auto Close Tag
 - Atom Keymap
 
-### vuejs-step02
-#### 실습 : vue.js 끝장내기 - 실무에 필요한 모든 것
+## vuejs-step02
+### 실습 : vue.js 끝장내기 - 실무에 필요한 모든 것
 
-### vuejs-step03
-#### 실습 : vue.js 완벽 가이드 - 실습과 리팩토링으로 배우는 실전 개념
+## vuejs-step03
+### 실습 : vue.js 완벽 가이드 - 실습과 리팩토링으로 배우는 실전 개념
 
 
 
