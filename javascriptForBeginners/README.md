@@ -159,7 +159,7 @@ function init(){
 init();
 ```
 
-# toggle
+## toggle
 ```javascript  
 const title = document.querySelector("#title");
 const CLICKED_CLASS = "clicked";
