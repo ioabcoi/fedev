@@ -12,7 +12,7 @@ div, input[type="text"] {box-sizing:border-box;}
 .btn {cursor:pointer;}
 .clicked {color:#00f;}
 
-.clock h2 {position:absolute;right:20px;top:20px;width:90px;height:30px;margin:0;padding:10px 10px 5px 10px;background:rgba(255,255,255,0.3);border:2px solid #fff;border-radius:15px;-webkit-border-radius:15px;font-size:16px;line-height:30px;text-align:center;}
+.clock h2 {position:absolute;right:20px;top:20px;width:110px;height:30px;margin:0;padding:10px 10px 5px 10px;background:rgba(255,255,255,0.3);border:2px solid #fff;border-radius:15px;-webkit-border-radius:15px;font-size:16px;line-height:30px;text-align:center;}
 
 .greetings {padding:10px 0;font-size:20px;}
 
