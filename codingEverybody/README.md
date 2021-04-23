@@ -1,6 +1,7 @@
+# codingEverybody
 
 
-- Math
+## Math
 
 Math.pow(3, 2); // 제곱 9
 Math.round(10.6); // 반올림 11
@@ -12,7 +13,7 @@ Math.random(); // 랜덤 0~1
 100* Math.random(); // 랜덤 0~100
 
 
-- Data type
+## Data type
 
 Boolean true false
 Number .. -1 0 1 ..
@@ -20,7 +21,6 @@ String "a" "b" "c"
 Undefined
 null
 
-+ Boolean
 빈 문자열 false
 undefined false
 값이 할당되지 않음 false
@@ -28,7 +28,7 @@ null false
 NaN false
 
 
-- 연산자
+## 연산자
 
 > >=
 < <= 
@@ -39,7 +39,7 @@ NaN false
 && ||
 
 
-- 조건문
+## 조건문
 
 if(조건){
     실행 코드
@@ -50,7 +50,7 @@ if(조건){
 }
 
 
-- 반복문
+## 반복문
 
 while(조건){
     반복되는 코드
@@ -71,7 +71,7 @@ for(var i = 0; i < 10; i++){
 }
 
 
-- 함수
+## 함수
 
 function 함수명([인자...[, 인자]]){
     코드
@@ -95,7 +95,7 @@ numbering();
 })();
 
 
-- 배열
+## 배열
 
 var 변수명 = ["element1", "element2"];
 
@@ -124,7 +124,7 @@ array[2] // javascript
 배열의 정렬(역순) array.reverse();
 
 
-- 객체
+## 객체
 
 var 변수명 = {
     key : value
@@ -169,12 +169,12 @@ information["show"](); // alert("Hello!");
 information.show(); // alert("Hello!");
 
 
-- 모듈
+## 모듈
 
 코드의 재활용, 유지보수 용이 -> 코드의 분리
 
 
-- 라이브러리
+## 라이브러리
 
 자주 사용되는 로직을 재사용하기 편리하도록 모아놓은 코드들의 집합.
 
