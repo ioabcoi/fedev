@@ -2,7 +2,7 @@
 
 
 ## Math
-
+```javascript
 Math.pow(3, 2); // 제곱 9
 Math.round(10.6); // 반올림 11
 Math.ceil(10.2); // 올림 11
@@ -11,10 +11,10 @@ Math.sqrt(9); // 제곱근 3
 Math.random(); // 랜덤 0~1
 10 * Math.random(); // 랜덤 0~10
 100* Math.random(); // 랜덤 0~100
-
+```
 
 ## Data type
-
+```javascript
 Boolean true false
 Number .. -1 0 1 ..
 String "a" "b" "c"
@@ -26,10 +26,10 @@ undefined false
 값이 할당되지 않음 false
 null false
 NaN false
-
+```
 
 ## 연산자
-
+```javascript
 > >=
 < <= 
 = != 
@@ -37,10 +37,10 @@ NaN false
 === !==
 == 보다 === 추천!!
 && ||
-
+```
 
 ## 조건문
-
+```javascript
 if(조건){
     실행 코드
 }else if(조건2){
@@ -48,10 +48,10 @@ if(조건){
 }else{
     실행 코드3
 }
-
+```
 
 ## 반복문
-
+```javascript
 while(조건){
     반복되는 코드
 }
@@ -69,10 +69,10 @@ for(초기화; 반복되는 조건; 반복되는 코드){
 for(var i = 0; i < 10; i++){
     console.log(i);
 }
-
+```
 
 ## 함수
-
+```javascript
 function 함수명([인자...[, 인자]]){
     코드
     return 반환값
@@ -93,10 +93,10 @@ numbering();
 (function (){
     console.log("hello!");
 })();
-
+```
 
 ## 배열
-
+```javascript
 var 변수명 = ["element1", "element2"];
 
 const array = new Array();
@@ -122,10 +122,10 @@ array[2] // javascript
 배열의 마지막 원소를 제거 array.pop();
 배열의 정렬 array.sort();
 배열의 정렬(역순) array.reverse();
-
+```
 
 ## 객체
-
+```javascript
 var 변수명 = {
     key : value
 };
@@ -167,14 +167,14 @@ console.log(information["list"]); // {"gu" : 9, "hyeji" : 34, "birth" : 1228}
 console.log(information["list"]["gu"]); // 9
 information["show"](); // alert("Hello!");
 information.show(); // alert("Hello!");
-
+```
 
 ## 모듈
-
+```javascript
 코드의 재활용, 유지보수 용이 -> 코드의 분리
-
+```
 
 ## 라이브러리
-
+```javascript
 자주 사용되는 로직을 재사용하기 편리하도록 모아놓은 코드들의 집합.
-
+```
