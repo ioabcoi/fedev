@@ -194,6 +194,7 @@ const image = new Image();
 ```
 
 ## Array.filter();
+Link : [MDN : Array.filter](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/filter "Array.filter")
 ```javascript  
 주어진 함수의 테스트를 통과하는 모든 요소를 모아 새로운 배열로 반환합니다.
 
@@ -207,9 +208,9 @@ function isBigEnough(value) {
 var filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
 // filtered 는 [12, 130, 44]
 ```
-[MDN : Array.filter](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/filter, "Array.filter")
 
 ## parseInt();
+Link : [MDN : parseInt](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/parseInt "parseInt")
 ```javascript 
 함수는 문자열 인자를 구문분석하여 특정 진수(수의 진법 체계에 기준이 되는 값)의 정수를 반환합니다.
 
@@ -220,9 +221,9 @@ parseInt(4.7, 10)
 parseInt(4.7 * 1e22, 10)        // 매우 큰 숫자가 4가 됨
 parseInt(0.00000000000434, 10)  // 매우 작은 숫자가 4가 됨
 ```
-[MDN : parseInt](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/parseInt, "parseInt")
 
 ## JSON.parse();
+Link : [MDN : JSON.parse](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse, "JSON.parse")
 ```javascript 
 메서드는 JSON 문자열의 구문을 분석하고, 그 결과에서 JavaScript 값이나 객체를 생성합니다. 
 선택적으로, reviver 함수를 인수로 전달할 경우, 결과를 반환하기 전에 변형할 수 있습니다.
@@ -235,12 +236,10 @@ JSON.parse('"foo"');           // "foo"
 JSON.parse('[1, 5, "false"]'); // [1, 5, "false"]
 JSON.parse('null');            // null
 ```
-[MDN : JSON.parse](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse, "JSON.parse")
 
 ## openweathermap
+Link : [openweathermap](https://openweathermap.org/ "openweathermap") 
 ```javascript  
-https://openweathermap.org/
-
 function getWeather(lat, lng){
     fetch(`https://url&lat=${lat}&lon=${lng}&appid=${API_KEY}&units=metrics`
     ).then(function(response){
