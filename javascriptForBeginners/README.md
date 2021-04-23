@@ -1,6 +1,6 @@
 # javascriptForBeginners
 
-Link : [GU : javascriptForBeginners](https://ioabcoi.github.io/fedev/javascriptForBeginners/ "javascriptForBeginners")
+Link : [GU | javascriptForBeginners](https://ioabcoi.github.io/fedev/javascriptForBeginners/ "javascriptForBeginners")
 
 ## var 
 ```javascript
@@ -208,7 +208,7 @@ function isBigEnough(value) {
 var filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
 // filtered 는 [12, 130, 44]
 ```
-Link : [MDN : Array.filter](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/filter "Array.filter")
+Link : [MDN | Array.filter](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/filter "Array.filter")
 
 ## parseInt();
 ```javascript 
@@ -221,7 +221,7 @@ parseInt(4.7, 10)
 parseInt(4.7 * 1e22, 10)        // 매우 큰 숫자가 4가 됨
 parseInt(0.00000000000434, 10)  // 매우 작은 숫자가 4가 됨
 ```
-Link : [MDN : parseInt](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/parseInt "parseInt")
+Link : [MDN | parseInt](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/parseInt "parseInt")
 
 ## JSON.parse();
 ```javascript 
@@ -236,7 +236,7 @@ JSON.parse('"foo"');           // "foo"
 JSON.parse('[1, 5, "false"]'); // [1, 5, "false"]
 JSON.parse('null');            // null
 ```
-Link : [MDN : JSON.parse](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse, "JSON.parse")
+Link : [MDN | JSON.parse](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse, "JSON.parse")
 
 ## openweathermap
 ```javascript  
@@ -254,4 +254,4 @@ function getWeather(lat, lng){
 const latitude = position.coords.latitude;
 const longitude = position.coords.longitude;
 ```
-Link : [openweathermap](https://openweathermap.org/ "Array.filter") 
+Link : [openweathermap](https://openweathermap.org/ "openweathermap") 
