@@ -36,16 +36,9 @@ Link : [github | 캡틴판교 | Cracking Vue.js](https://joshua1988.github.io/vu
 
 Link : [guide | vue.js](https://kr.vuejs.org/v2/guide/ "guide | vue.js")
 
-#### vscode plugin
+Link : [inflearn | 팀개발을 위한 Git, Github 시작하기](https://www.inflearn.com/course/팀개발-깃-깃허브 "inflearn | 팀개발을 위한 Git, Github 시작하기")
 
-- Vetur
-- Night Owl
-- Material Icon Theme
-- Live Server
-- ESLint
-- Prettier
-- Auto Close Tag
-- Atom Keymap
+Link : [inflearn | 팀개발을 위한 Git, Github 시작하기(책)](http://www.yes24.com/Product/Goods/85382769?Acode=101 "inflearn | 팀개발을 위한 Git, Github 시작하기(책)")
 
 ## vuejs-step02
 ### 실습 : vue.js 끝장내기 - 실무에 필요한 모든 것
