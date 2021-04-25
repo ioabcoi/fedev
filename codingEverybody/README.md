@@ -1,6 +1,5 @@
 # codingEverybody
 
-
 ## Math
 ```javascript
 Math.pow(3, 2); // 제곱 9
