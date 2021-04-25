@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        
+        /*
+        
+            ## 인스턴스
+            https://kr.vuejs.org/v2/guide/instance.html
+
+            사례, 경우, 실체
+
+            new Vue();
+            var vm = new Vue();
+            console.log(vm);
+
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    message: 'hi'
+                }
+            });
+
+            function Vue(){
+                this.logText = function(){
+                    console.log('hello');
+                }
+            }
+            var vm = new Vue();
+            vm.logText();
+
+            new Vue({
+                el: ,       // 인스턴스가 그려지는 화면의 시작점 (특정 html 태그)
+                template: , // 화면에 표시할 요소 (html, css)
+                data: ,     // 뷰의 반응성(Reactivity)이 반영된 데이터의 속성
+                methods: ,  // 화면의 동작과 이벤트 로직을 제어하는 메서드
+                created: ,  // 뷰의 라이프 사이클과 관련된 속성
+                watch: ,    // data에서 정의한 속성이 변화했을 때 추가 동작을 수행할 수 있게 정의하는 속성
+            });
+
+            ### 생성자함수
+            
+            https://developer.mozilla.org/ko/docs/orphaned/Web/JavaScript/Guide/Obsolete_Pages/Core_JavaScript_1.5_Guide/Creating_New_Objects/Using_a_Constructor_Function
+
+            1. 생성자 함수를 작성함으로써 개체를 정의합니다.
+            2. new 키워드를 사용하여 개체의 인스턴스를 만듭니다.
+
+            function Car(make, model, year) {
+                this.brand = brand;
+                this.model = model;
+                this.year = year;
+            }
+            var mycar1 = new Car("BMW", "BMW Z4 ROADSTER", 2020);
+            var mycar2 = new Car("Volvo", "XC40", 2021);
+            mycar.year // 1993
+
+            function Person(){
+                this.name = name;
+                this.job = job;
+                this.car = car;
+            }
+            var gu = new Person('hyeji', 'fedev', mycar2);
+            gu.name // hyeji
+            gu.car.brand // Volvo
+
+            mycar1.color = "black"; // 아무때나 속성 추가할 수 있음
+
+            ### Prototype
+
+            https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor
+            
+            Object.prototype.constructor
+
+            var o = {};
+            o.constructor === Object; // true
+
+            var o = new Object;
+            o.constructor === Object; // true
+
+            var a = [];
+            a.constructor === Array; // true
+
+            var a = new Array;
+            a.constructor === Array; // true
+
+            var n = new Number(3);
+            n.constructor === Number; // true
+
+        */
+
+        /* 
+            var options = {
+                el: '#app',
+                data: {
+                    message: 'hi'
+                },
+                method: {
+
+                },
+                created: {
+
+                }
+            }
+            var vm = new Vue(options);
+        */
+
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                message: 'hi'
+            },
+            method: {
+
+            },
+            created: function(){
+
+            }
+        });
+
+    </script>
+</body>
+</html>

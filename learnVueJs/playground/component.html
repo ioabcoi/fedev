@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <app-header></app-header>
+        <app-content></app-content>
+        <app-footer></app-footer>
+    </div>
+    <div id="app2">
+        <app-header></app-header>
+        <app-content></app-content>
+        <app-footer></app-footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+
+        /*
+        
+            ## 컴포넌트
+            화면의 영역을 영역별로 구분하여 코드로 관리하는 것
+            화면의 영역을 구분하여 개발할 수 있는 뷰의 기능
+            재사용성
+
+            ### 전역 컴포넌트
+            
+            Vue.component('컴포넌트 이름', 컴포넌트 내용);     
+            Vue.component('컴포넌트 이름', {
+                컴포넌트 내용
+            });
+            Vue.component('my-component-name', {
+                options
+            });
+
+            Vue.component('component-a', { options });
+            Vue.component('component-b', { options });
+            Vue.component('component-c', { options });
+            
+            new Vue({ el: '#app' });
+
+            <div id="app">
+                <component-a></component-a>
+                <component-b></component-b>
+                <component-c></component-c>
+            </div>
+            
+            전역 컴포넌트는 
+            어떤 루트 Vue 인스턴스(new Vue)에서도 사용가능
+            모든 하위 컴포넌트에도 사용가능
+
+            ### 지역 컴포넌트
+
+            new Vue({
+                el: '#app',
+                components: {
+                    'key' : 'value',
+                    '컴포넌트 이름' : 컴포넌트 내용,
+                }
+            });
+
+            var ComponentA = { options };
+            var ComponentB = { options };
+            var ComponentC = { options };
+
+            new Vue({
+                el: '#app',
+                components: {
+                    'component-a': ComponentA,
+                    'component-b': ComponentB
+                }
+            })
+
+            지역 컴포넌트는 
+            하위컴포넌트에서는 사용이 불가능하다.
+            인스턴스마다 새로 생성해야 한다.
+            ComponentA를 ComponentB에서 쓰고 싶다면 아래와 같이 해야 합니다.
+
+            var ComponentA = { options }
+            var ComponentB = {
+                components: {
+                    'component-a': ComponentA
+                },
+                options
+            }
+
+            ### 컴포넌트 통신 방식
+
+            상위 컴포넌트 <- evnet 발생 -  하위 컴포넌트 // 이벤트를 올려줌
+            상위 컴포넌트  - props 전달 -> 하위 컴포넌트 // 데이터를 내려줌
+            
+            ### 컴포넌트 이름표기법
+
+            케밥-표기법
+            Vue.component('my-component-name', {});
+            컴포넌트 정의 <my-component-name>
+
+            파스칼표기법
+            Vue.component('MyComponentName', {});
+            컴포넌트 정의 <my-component-name> <MyComponentName>
+
+            ### 모듈 시스템
+
+            https://kr.vuejs.org/v2/guide/components-registration.html
+
+        */
+       
+        Vue.component('app-header', {
+            template: '<h1>Header</h1>'
+        });
+
+        Vue.component('app-content', {
+            template: '<div>Content</div>'
+        });
+
+        new Vue({
+            el: '#app',
+            components: {
+                'app-footer': {
+                    template: '<footer>Footer</footer>'
+                }
+            },
+        });
+
+        new Vue({
+            el: '#app2'
+        });
+
+        /*
+
+            ### 전역 컴포넌트 vs 지역 컴포넌트의 비교
+            [Vue warn]: Unknown custom element: 
+            <app-footer> - did you register the component correctly? 
+            For recursive components, make sure to provide the "name" option.
+
+        */
+        
+    </script>
+</body>
+</html>

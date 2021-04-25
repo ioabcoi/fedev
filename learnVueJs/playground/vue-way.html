@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf=8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>document</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        
+        /*
+
+            var a = 10; // 할당
+            a = 20; // 재할당
+            
+            ## Object.defineProperty();
+
+            객채의 특정 속성을 재정의
+            https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty
+
+            Object.defineProperty(대상 객체, 객체의 속성, {
+                정의할 내용
+            });
+
+            ## reactivity
+
+            데이터의 변화를 라이브러리에서 감지해서 바로 화면에서 보여줌
+
+            ## 즉시실행함수 IIFE
+            
+            Immediately Invoked Function Expression
+            https://developer.mozilla.org/ko/docs/Glossary/IIFE
+
+            (function(){
+                실행코드
+            })();
+            
+        */
+
+        var div = document.querySelector("#app");
+        var viewModel = {};
+
+        (function(){
+            function init(){
+                Object.defineProperty(viewModel, "str", {
+                    // 객체 속성에 접근했을 때의 동작을 정의
+                    get: function(){
+                        console.log("접근");
+                    },
+                    // 속성에 값을 할당했을 때의 동작을 정의
+                    set: function(newValue){
+                        console.log("할당", newValue);
+                        render(newValue);
+                    }
+                });
+            }
+
+            function render(value){
+                div.innerHTML = value;
+            }
+
+            init();
+        })();
+
+    </script>
+</body>
+</html>
