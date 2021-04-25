@@ -2,7 +2,12 @@ html, body, h1, h2, h3 {padding:0;margin:0;}
 body {background:#000;color:#fff;}
 div, input[type="text"] {box-sizing:border-box;}
 
-.bgImage {position:absolute;left:0;top:0;right:0;bottom:0;width:100%;height:100%;}
+.bgImage {position:absolute;z-index:0;left:0;top:0;width:100%;height:100%;animation:fadeIn 0.5s;}
+@keyframes fadeIn {
+	from {opacity:0;}
+	to {opacity:1;}
+}
+.bgColor {position:absolute;z-index:0;left:0;top:0;width:100%;height:100%;animation:fadeIn 0.5s;}
 
 .wrap {position:relative;z-index:1;padding:100px 20px;text-align:center;}
 .wrap input[type="text"] {display:block;width:100%;height:40px;padding:5px 10px;margin:10px 0;border:2px solid #fff;background:rgba(255,255,255,0.5);color:#000;font-size:16px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;vertical-align:middle;border-radius:0;-webkit-border-radius:0;appearance:none;-moz-appearance:none;-o-appearance:none;-webkit-appearance:none;}
@@ -29,10 +34,3 @@ div, input[type="text"] {box-sizing:border-box;}
 .toDoList li button {margin-left:10px;}
 
 .weather {position:absolute;left:0;bottom:20px;display:block;width:100%;font-size:16px;text-align:center}
-
-@keyframes fadeIn {
-	from {opacity:0;}
-	to {opacity:1;}
-}
-
-.bgImage {position:absolute;z-index:0;left:0;top:0;width:100%;height:100%;animation:fadeIn 0.5s;}
