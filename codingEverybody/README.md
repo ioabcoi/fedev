@@ -1,5 +1,8 @@
 # codingEverybody
 
+- Link : [생활코딩](https://opentutorials.org/course/743 "생활코딩")
+- Link : [inflearn](https://www.inflearn.com/course/지바스크립트-언어-기본 "inflearn")
+
 ## Math
 ```javascript
 Math.pow(3, 2); // 제곱 9
