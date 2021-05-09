@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        /* 2021-04-27 화요일 PM 14:00 - 16:00
+
+        ## data type
+
+        ### Primitive Type 기본형
+        Number, String, Boolean, null, undefined
+
+        var a;
+        a = 123;
+        a = 456;
+
+        ### Reference Type 참조형
+        Object (Array, Function, RegExp)
+        같은 데이터/값은 하나에 존재하고 같은 데이터를 참조한다. 재사용. 메모리 확보.
+
+        var obj = {
+            a: 1,
+            b: 'bbb'
+        };
+        obj.a = 2;
+
+        var obj = {
+            x: 3,
+            arr: [3, 4]
+        };
+        obj.arr = 'str';
+
+        ### 기본형과 참조형의 차이
+
+        var a = 10;
+        var b = a;
+        var obj1 = { c: 10, d: 'ddd' };
+        var obj2 = obj1;
+        b = 15;
+        obj2.c = 20;
+
+        ## execution context
+        함수를 실행할 때 필요한 환경정보를 담은 객체
+
+        - Variable Environment
+        - Lexical Environment
+         : environmentRecord : 현재 문맥의 식별자 (hoisting)
+         : outerEnvironmentReference : 
+        - 
+
+        ## this
+        실행 context가 활성화 되는 순간 this를 반환한다
+        
+        - 전역공간에서 : window / global
+        - 함수 호출 시 : window / global
+
+        ### window
+
+        function a(){
+            console.log(this);
+        }
+        a(); // this : window
+
+        function b(){
+            function c(){
+                console.log(this);
+            }
+            c();
+        }
+        b(); // this : window
+
+        ### global
+
+        var a = {
+            b: function{
+                console.log(this); 
+            }
+        };
+        a.b(); // this : b
+
+        var a = {
+            b: {
+                c: function(){
+                    console.log(this);
+                }
+            }
+        };
+        a.b.c(); // this : c
+
+        ### 함수는 (전역객체의) 메소드다!
+
+        #### 메소드 호출 시 : 메소드 호출 주체 (메소드 앞)
+        
+        var a = 10;
+        var obj = {
+            a: 20,
+            b: function(){
+                // var self = this;
+                console.log(this.a);
+                funtion c(){
+                    console.log(this.a);
+                    // console.log(self.a);
+                }
+                c();
+            }
+        };
+        obj.b();
+
+        #### callback 호출 시 : 명시적인 this 바인딩
+
+            
+        #### 생성자함수 호출 시 : 
+
+
+
+        ## callback
+        ## closure
+        ## prototype
+        ## class
+
+
+        next.. 
+        */
+
+    </script>
+</body>
+
+</html>
