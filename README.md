@@ -14,6 +14,9 @@ Link : [youtube | 생활코딩 ](https://www.youtube.com/watch?v=PZIPsKgWJiw&lis
 
 ## javascriptES6+
 ### 이론 : javascript ES6+ 제대로 알아보기 - 초급
+
+Link : [inflearn | avascript ES6+ 제대로 알아보기 - 초급](https://www.inflearn.com/course/ecmascript-6-flow/  "inflearn | avascript ES6+ 제대로 알아보기 - 초급")
+
 ### 이론 : javascript ES6+ 제대로 알아보기 - 중급
 
 ## javascriptForBeginners 
