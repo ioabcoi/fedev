@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        /* 2023-03-27 월요일 10:30 - 
+
+        ## tag function
+
+        const tag = function (strs, arg1, arg2) {
+            return {str : strs, args: [arg1, arg2]}
+        }
+        const res = tag `순서가 ${1}이렇게 ${1}`
+        console.log(res);   
+        // ->
+        {str: Array(3), args: Array(2)}
+        args: (2) [1, 1]
+        str: Array(3)
+            0: "순서가 "
+            1: "이렇게 "
+            2: ""
+            length: 3
+            raw: (3) ['순서가 ', '이렇게 ', '']
+
+        무조건 문자열이 interpolation보다 한개 더 많음
+
+        const tag = function (strs, ...args) {  // ... 뒤에 몇개가 들어오든 배열로
+            return {str : strs, arg: args}
+        }
+        tag`${1}이렇게 ${2}`
+        // ->
+        arg: (2) [1, 2]
+        str: Array(3)
+            0: ""
+            1: "이렇게 "
+            2: ""
+            length: 3
+            raw: (3) ['', '이렇게 ', '']
+
+        tag`${1}이렇게 ${2}
+        
+        `
+        // ->
+        arg: (2) [1, 2]
+        str: Array(3)
+            0: ""
+            1: "이렇게 "
+            2: "\n        \n        "
+            length: 3
+            raw: (3) ['', '이렇게 ', '\n        \n        ']
+
+        tag`${1}이렇게 ${2}\n\n`
+        // ->
+        arg: (2) [1, 2]
+        str: Array(3)
+            0: ""
+            1: "이렇게 "
+            2: "\n\n"
+            length: 3
+            raw: (3) ['', '이렇게 ', '\\n\\n']
+
+        tag`${1}이렇게 ${2}${3}`
+        // ->
+        args: (2) [1, 2]
+        str: Array(4)
+            0: ""
+            1: "이렇게 "
+            2: ""
+            3: ""
+
+        const tags = (strings, ...expressions) => { console.log(strings, expressions) }
+        const a = 'iu', b = 'Friday'
+        const str = tags `Hello, ${a}! Today is ${b}!!`
+        // ['Hello, ', '! Today is ', '!!']
+        // ['iu', 'Friday']
+
+        const addSuffix = (strs, ...exps) => {
+            return strs.reduce(function (acc, curr, i){
+                let res = acc + curr + '_suffix '
+                if(exps[i]) res += exps[i]
+                return res
+            }, '');
+        }
+        console.log(addSuffix `이 함수는${'각 문자열'}마다 ${'|_suffix|'}라는 글자를 추가합니다.`);
+        // 이 함수는_suffix 각 문자열마다 _suffix |_suffix|라는 글자를 추가합니다._suffix 
+
+        const setDecimalSeperators = function (strs, ...args) {
+            return args.reduce(function (p, c, i){
+                return p + strs[i] + (c + '').replace(/\d{1,3}(?=(\d{3})+(?!\d))/g, '$&,')
+            }, '') + strs[strs.length -1]
+        }
+        const res = setDecimalSeperators `이 사과는 하나에 ${2000}원이고, 총 ${1234567}개를 구입하시면 총 ${2000 * 1234567}원 이에요.`
+        console.log(res);
+        // 이 사과는 하나에 2,000원이고, 총 1,234,567개를 구입하시면 총 2,469,134,000원 이에요.
+
+        ### Map
+
+        const m = new Map();
+        m.set('a', 1);
+        m.set('b', 2);
+        // Map(2) {'a' => 1, 'b' => 2}
+
+        const b = {}
+        b.a = 1;
+        b.b = 2;
+        // Object(2) {a: 1, b: 2}
+
+        const createCollection = {
+            Map(keys, ...vals) {
+                const m = new Map()
+                vals.forEach(function (val, i) {
+                    m.set(keys[i].trim(), val)
+                })
+                return m
+            },
+            WMap(keys, ...vals) {
+                const wm = new WeakMap()
+                for (let i = 0; i < vals.length; i += 2) {
+                    wm.set(vals[i], vals[i + 1])
+                }
+                return wm
+            },
+        }
+
+        const wkeys = [{ a: 100 }, { b: 200 }]
+        const map = createCollection.Map`
+            a ${10}
+            b ${'what'}
+            fn ${v => v + 10}`
+        let wmap = createCollection.WMap`
+            ${wkeys[0]} ${10}
+            ${wkeys[1]} ${20}`
+        console.log(map);   // Map(3) {'a' => 10, 'b' => 'what', 'fn' => ƒ}
+        console.log(wmap);  // WeakMap {Object => 10, Object => 20}
+
+        ## String.raw
+
+        raw 날것의
+        String.raw 입력한 내용 그대로 출력
+        https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/raw
+
+        const filePath = String.raw`C:\Development\profile\aboutme.html`;
+        console.log(`The file was uploaded from: ${filePath}`);
+        // The file was uploaded from: C:\Development\profile\aboutme.html
+
+        const html = String.raw;
+        const doc = html`<canvas>\n</canvas>`;
+        console.log(doc);
+        // "<canvas>\\n</canvas>"
+
+        const html = (strings, ...values) => String.raw({ raw: strings }, ...values);
+        // Some formatters will format this literal's content as HTML
+        const doc = html`<canvas>\n</canvas>`;
+        // "<canvas>\n</canvas>"; the "\n" becomes a line break
+        console.log(doc);
+        // <canvas>
+        // </canvas>
+
+        String.raw({ raw: "test" }, 0, 1, 2); // 't0e1s2t'
+        // 't0e1s2t'
+
+        const res = String.raw `순서가 ${1}이렇게 ${2}\n\n`;
+        console.log(res);   // 순서가 1이렇게 2\n\n
+
+        `순서가 ${1}이렇게 ${2}\n\n`    // '순서가 1이렇게 2\n\n'
+
+        console.log(`Hello\nWorld!`)
+        console.log(String.raw `Hello\nWorld!`)
+        console.log(String.raw `Hello
+World!`)
+        // Hello
+        // World!
+        // Hello\nWorld!
+        // Hello
+        // World!
+
+        const tags = function (strs, ...exps) {
+            return { strs, exps }
+        }
+        const a = 'iu', b = 'Friday'
+        const str = tags `Hello, ${a}\n Today is ${b}\n`
+        console.log(str);
+        // ->
+        {strs: Array(3), exps: Array(2)}
+            exps: (2) ['iu', 'Friday']
+            strs: Array(3)
+                0: "Hello, "
+                1: "\n Today is "
+                2: "\n"
+                length: 3
+                raw: (3) ['Hello, ', '\\n Today is ', '\\n']
+
+        # default parameter 매개변수 기본값
+        https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters
+
+        function fnName(param1 = defaultValue1, … , … paramN = defaultValueN) {
+            // …
+        }
+
+        function multiply(a, b = 1) {
+            return a * b;
+        }
+        console.log(multiply(5, 2));
+        // Expected output: 10
+        console.log(multiply(5));
+        // Expected output: 5
+
+        function greet(name, greeting, message = `${greeting} ${name}`) {
+            return [name, greeting, message];
+        }
+        greet("David", "Hi"); // ["David", "Hi", "Hi David"]
+        greet("David", "Hi", "Happy Birthday!"); // ["David", "Hi", "Happy Birthday!"]
+
+        const f = function (x, y, z) {
+            x = x ? x : 4
+            y = y || 5
+            if (!z) {
+                z = 6
+            }
+            console.log(x, y, z);
+        }
+        f(1)    // 1 5 6
+        f(0, null)  // 4 5 6
+
+        const f = function (x, y, z) {
+            x = x !== undefined ? x : 4
+            y = typeof y !=== 'undefined' || 5
+            if (!z) {
+                z = 6
+            }
+            console.log(x, y, z);
+        }
+
+        const f = function (x = 4, y = 5, z = 6) {
+            console.log(x, y, z);
+        }
+        f(0, null)  // 0 null 6
+        f(0, null, false)  // 0 null false
+
+        const f = function (a = 1, b = 2, c = 3, d = 4, e = 5, f = 6) {
+            console.log(a, b, c, d, e, f)
+        }
+        f(7, 0, "", false, null)    // 7 0 "" false null 6
+
+        ## undefined 혹은 누락된 파라미터에 대해서만 default parameter 등장
+
+        ## 식
+
+        function a (a, b, c) {
+            var a = 1;
+            var b = 2;
+            var c = 3;
+        }
+        a(1, 2, 3);
+
+        function a (a = 1, b = 2, c = 3) {
+            let _a = a !== undefined ? a : 1;
+            let _b = b !== undefined ? b : 2;
+            let _c = c !== undefined ? c : 3;
+        }
+        a(1, 2, 3);
+
+        function a (a = 1, b = a + 1, c = 3) {
+            console.log(a, b, c);
+        }
+        a(1, undefined, 3); // 1 2 3
+
+        const f = function (x = 1, y = 3 + x) {
+            console.log(x, y)
+        }
+        f()
+
+        const getDefault = function () {
+            console.log('getDefault Called.')
+            return 10
+        }
+        const sum = function (x, y = getDefault()) {
+            console.log(x + y)
+        }
+        sum(1, 2)
+        sum(1)
+
+        const notValid = function () {
+            console.error('notValid Called.')
+            return 10
+        }
+        const sum = function (x = notValid(), y = notValid()) {
+            console.log(x + y)
+        }
+        sum(1, 2)   // 3
+        sum(1)  
+        // notValid Called.
+        // 11
+
+        ## `let` 선언과 동일한 효과
+
+        const f = function (x = 1, y = 2 + x) {
+            let z = y + 3
+            x = 4
+            console.log(x, y, z)
+        }
+        f()
+
+        ## TDZ
+
+        const multiply = function (x, y = x * 2) {
+            console.log(x * y)
+        }
+        multiply(2, 3)  // 6
+        multiply(2) // 8
+
+        const multiply = function (x = y * 3, y) {
+            console.log(x, y)
+        }
+        multiply(2, 3)  // 2 3
+        multiply(undefined, 2)  // Cannot access 'y' before initialization
+
+        ## 기본값으로 할당하고자 하는 값이 변수일 경우 주의사항
+
+        let a = 10
+        let b = 20
+        function f (aa = a, b = b){
+            console.log(aa, b)
+        }
+        f(1, 2) // 1 2
+        f(undefined, 2) /// 10 2
+        f(1)    // b is not defined - TDZ
+
+        ## arguments에도 영향을 줄까?
+
+        // 유사배열객체 (array-like object) : 객체인데, 각 프로퍼티의 키가 인덱스이고, length라는 프로퍼티가 있는 객체
+
+        const a = function(a = 1, b = 2, c = 3) {
+            // console.log(arguments)  // 유사배열객체 {0: 1, 1: 2, 2: 3, length: 3, callee: , }
+            console.log(a, b, c)
+
+            // console.log(arguments.pop()) // 객체인데 배열 메소드를 써서 에러남
+            // console.log(Array.prototype.pop.call(arguments)) 
+            // ->
+            const arg = Array.prototype.slice.call(arguments);
+            console.log(arg);
+            console.log(arg.pop());
+        }
+        a() // 1 2 3, undefined
+        a(4)    // 4 2 3, 4
+        a(4, 5) // 4 5 3, 5
+        a(4, undefined, 6)  // 4 2 6, 6
+        a(4, 5, 6)  // 4 5 6, 6
+        a(4, 5, 6, 7, 8, 9, 10) // 4 5 6, 10
+
+        # rest parameter (나머지 매개변수)
+
+        function foo (a, b) {
+            a = 1
+            arguments[0] = 2
+            console.log(a, arguments[0])    // a: 1 2 // arguments[0]: 2
+        }
+        foo(10, 20) // 2 2
+
+        function f (x, y) {   // 매개변수, 파라미터
+            var rest = Array.prototype.slice.call(arguments, 2) // [true, null, undefined, 10]
+            var rest = Array.prototype.slice.call(arguments, 3) // [null, undefined, 10]
+            var rest = Array.prototype.slice.call(arguments, 4) // [undefined, 10]
+            console.log(rest)
+        }
+        f(1, 2, true, null, undefined, 10)
+
+        function f (x, y, ...z) {
+            console.log(z)  // [true, null, undefined, 10]
+        }
+        f(1, 2, true, null, undefined, 10)
+
+        function f (...z) {
+            console.log(z)  // [1, 2, true, null, undefined, 10]
+        }
+        f(1, 2, true, null, undefined, 10)
+
+        ## `...[매개변수명]`
+        ## 오직 한 번, 매개변수의 가장 마지막에서만
+
+        const f = function (_first, ...rest, _last) {   // Uncaught SyntaxError: Rest parameter must be last formal parameter
+            console.log(_first, _last)
+        }
+        f(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+
+        ## 객체의 setter에서
+
+        const obj = {
+            _a: 'a',
+            get a () { return this._a; },
+            set a (v) { this._a = v; }  // 인자 하나만 받을 수 있음
+            // set a (x, y) { this._a = v; }  // Uncaught SyntaxError: Setter must have exactly one formal parameter.
+        }
+        obj.a = 10;
+        console.log(obj.a)  // 10
+        console.log(obj)    // { _a: 10 }
+
+        let person = {
+            name: 'name',
+            age : 30,
+            get personInfo(){
+                return this.name + ' ' + this.age
+            },
+            set personInfo (val) {  // ...val XXX
+                this.name = val[0]
+                this.age  = val[1]
+            }
+        }
+        console.log(person.personInfo)  // name 30
+
+        ## `arguments`를 대체
+
+        function argsAlternate (...args) {
+            console.log(args.length, arguments.length)
+            console.log(args[0], arguments[0])
+            console.log(args[args.length - 1], arguments[arguments.length - 1])
+            args[1] = 10
+            arguments[1] = 20
+            console.log(args[1], arguments[1])
+            console.log(args, arguments)
+        }
+        argsAlternate(1, 2, 3, 4)
+        // ->
+        4 4
+        1 1
+        4 4
+        10 20
+        [1, 10, 3, 4] [1, 20, 3, 4]
+        
+
+        # spread operator
+        # enhanced Object functionalities
+        ## shortfand property
+        ## concised method
+        ## computed method
+        ## property enumeration order
+        # Arrow Function
+        # Function
+        ## name property
+        ## new.target
+        ## 함수선언문과 스코프
+        # Destructuring assignment
+        ## 배열의 해체할당
+        ## 객체의 해체할당
+        */
+
+    </script>
+</body>
+
+</html>
