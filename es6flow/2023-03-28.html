@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        /* 2023-03-28 화요일 15:30 - 
+
+        # spread operator 펼치기 연산자. 전개 연산자
+
+        var birds = ['eagle', 'pigeon']
+        var mammals = ['rabbit', 'cat']
+        var animals = birds.concat('whale').concat(mammals)
+        console.log(animals);   // ['eagle', 'pigeon', 'whale', 'rabbit', 'cat']
+
+        const animals2 = [...birds, 'whale', ...mammals]
+        console.log(animals2);  // ['eagle', 'pigeon', 'whale', 'rabbit', 'cat']
+
+        ## 배열의 각 인자를 펼친 효과
+
+        const values = [20, 10, 30, 50, 40]
+        console.log(20, 10, 30, 50, 40) // 20 10 30 50 40
+        console.log(...values)  // 20 10 30 50 40
+
+        console.log(Math.max(20, 10, 30, 50, 40))   // 50
+        console.log(Math.max.apply(null, values))   // 50
+        console.log(Math.max(...values))    // 50
+
+        ## 앞뒤로 다른 값들을 함께 사용할 수도 있다.
+
+        const values = [3, 4, 5, 6, 7, 8]
+        const sum = function (...args) {
+            return args.reduce(function (p, c) {
+                return p + c
+            })
+        }
+        console.log(sum(1, 2, ...values, 9, 10))    // 55
+
+        getter: 나머지 / 받는 입장
+        setter: 펼치기 / 주는 입장
+
+        ## iterable한 모든 데이터는 펼칠 수 있다.
+        
+        반복될 수 있는
+        반복할 수 있는
+
+        const str = 'Hello!'
+        const splitArr = str.split('')
+        const restArr = [...str]
+        console.log(splitArr, restArr)  //  ['H', 'e', 'l', 'l', 'o', '!'] ['H', 'e', 'l', 'l', 'o', '!']
+
+        ## push, unshift, concat 등의 기능을 대체할 수 있다.
+
+        let originalArr = [2, 3]
+        const preArr    = [-2, -1]
+        const sufArr    = [6, 7]
+
+        originalArr.unshift(1)  // 원래 배열
+        originalArr.push(4)     // 원래 배열
+        originalArr = [0, ...originalArr, 5]    // 새로운 배열
+        console.log(originalArr)    // [0, 1, 2, 3, 4, 5]
+
+        const concatArr = preArr.concat(originalArr, sufArr)
+        const restArr = [...preArr, ...originalArr, ...sufArr]
+        console.log(concatArr, restArr) // [-2, -1, 0, 1, 2, 3, 4, 5, 6, 7] [-2, -1, 0, 1, 2, 3, 4, 5, 6, 7]
+
+        ## '새로운' 배열이다.
+
+        let originalArray = [1, 2]
+        let copiedArray = [...originalArray]
+        console.log(originalArray === copiedArray)
+
+        originalArray.push(3)
+        console.log(originalArray)
+        console.log(copiedArray)
+
+        ## '얕은복사'만을 수행한다.
+
+        let originalArray = [{
+            first: 'Hello,',
+            second: 'World!'
+        }, {
+            first: 'Welcome',
+            second: 'ES6!'
+        }]
+        let copiedArray = [...originalArray]
+        console.log(originalArray[0].first) // Hello,
+
+        copiedArray[0].first = "Hi,"
+        console.log(originalArray[0].first) // Hi,
+
+        ## 참고
+        
+        // ECMAScript Proposal
+        [tc39 propersals](https://github.com/tc39/proposals)
+        
+        es3 199x
+        es5 2009
+        es2015 es6 tc39
+        es2016
+        es2017
+
+        Proposal
+        stage 0: 제안
+        stage 1: 검토
+        stage 2: 구체화
+        stage 3: 도입 예정
+        stage 4: 도입 확정
+        
+        [object-rest-spread](https://github.com/tc39/proposal-object-rest-spread)
+
+        # enhanced Object functionalities 객체의 향상된 기능들
+
+        ## shortfand property 프로퍼티 축약
+    
+        var x = 10
+        var y = 20
+        var obj = {
+            x: x,
+            y: y
+        }
+        // ->
+        const x = 10
+        const y = 20
+        const obj = {
+            x,
+            y
+        }
+        
+        ## 프로퍼티의 key와 value에 할당할 변수명이 동일한 경우 value 생략 가능
+
+        ### 함수에서 객체를 리턴할 때
+
+        const convertExtension = function (fullFileName) {
+            const fullFileNameArr = fullFileName.split('.')
+            const filename = fullFileNameArr[0]
+            const ext = fullFileNameArr[1] && fullFileNameArr[1] === 'png' ? 'jpg' : 'gif'
+            return {
+                filename,
+                ext
+            }
+        }
+        convertExtension('abc.png') // {filename: 'abc', ext: 'jpg'}
+
+
+        ### destructuring assignment
+
+        const {
+            name,
+            age
+        } = {
+            name: '이름',
+            age: 30
+        }
+        console.log(name, age)  // 이름 30
+
+        ## concised method 간결한 메소드
+
+        var obj = {
+            name: 'foo',
+            getName: function () { return this.name }
+        }
+        // ->
+        const obj = {
+            name: 'foo',
+            getName () { return this.name }
+        }
+
+        ### `:function` 키워드 제거
+
+        ### `super` 명렁어로 상위 클래스에 접근 가능
+
+        super: 상위의
+        sub: 하위의
+
+        super class: 상위 클래스
+        sub class: 하위 클래스
+
+        const Person = {
+            greeting: function () { return 'hello' }
+        }
+        const friend = {
+            greeting: function () {
+                return 'hi, ' + super.greeting()
+            }
+        }
+        Object.setPrototypeOf(friend, Person)
+        friend.greeting()
+
+        const Person = {
+            greeting () { return 'hello' }
+        }
+        const friend = {
+            greeting () {
+                return 'hi, ' + super.greeting()
+            }
+        }
+        Object.setPrototypeOf(friend, Person)
+        friend.greeting()
+
+        ### `prototype` 프로퍼티가 없음 -> 생성자함수로?
+
+        const Person = {
+            greeting () { return 'hello' }
+        }
+        const p = new Person.greeting()
+
+        ### 그밖에는 모두 기존 함수/메소드와 동일
+
+        const obj = {
+            a () { console.log('obj log') },
+            log () { console.log(this) }
+        }
+        console.log(obj.a.name)
+        setTimeout(obj.a, 1000)
+        obj.log()
+        obj.log.call([])
+        setTimeout(obj.log.bind('haha'), 2000)
+
+        ## computed method 계산된 프로퍼티명
+
+        var className = ' Class'
+        var obj = {}
+
+        obj.'ab cd' = 'AB CD'   // error
+        obj = {
+            'ab cd': 'AB CD'
+        }
+        obj['ab cd'] = 'AB CD'
+
+        var obj = {
+            'A' + className: 'A급'  // error
+        }
+        obj['A' + className] = 'A급'
+        const obj2 = {
+            'ab cd': 'AB CD'
+            ['A' + className]: 'A급'
+        }
+
+        let suffix = ' name'
+        let iu = {
+            ['last' + suffix]: '이',
+            ['first' + suffix]: '지은'
+        }
+        console.log(iu) // {last name: '이', first name: '지은'}
+
+        // const count = ((c) => () => c++)(0)
+        const count = (function (c) {
+            return function () {
+                return c++
+            }
+        })(0)
+        var obj = {
+            [`a_${count()}`]: count(),
+            [`a_${count()}`]: count(),
+            [`a_${count()}`]: count()
+        }
+        console.log(obj)    // {a_0: 1, a_2: 3, a_4: 5}
+
+        ### 객체 리터럴 선언시 프로퍼티 키값에 대괄호 표기로 접근 가능
+        ### 대괄호 내에는 값 또는 식을 넣어 조합할 수 있음
+
+        ## property enumeration order 고정된 프로퍼티 열거 순서
+        
+        const obj1 = {
+            c: 1,
+            2: 2,
+            a: 3,
+            0: 4,
+            b: 5,
+            1: 6
+        }
+        const keys1 = []
+        for (const key in obj1) {
+            keys1.push(key)
+        }
+        console.log(keys1)  // ['0', '1', '2', 'c', 'a', 'b']
+        console.log(Object.keys(obj1))  // ['0', '1', '2', 'c', 'a', 'b']
+        console.log(Object.getOwnPropertyNames(obj1))   // ['0', '1', '2', 'c', 'a', 'b']
+
+        const obj2 = {
+            [Symbol('2')]: true,
+            '02': true,
+            '10': true,
+            '01': true,
+            '2': true,
+            [Symbol('1')]: true
+        }
+        const keys2= []
+        for(const key in obj2) {
+            keys2.push(key)
+        }
+        console.log(keys2)  // ['2', '10', '02', '01']
+        console.log(Object.keys(obj2))  // ['2', '10', '02', '01']
+        console.log(Object.getOwnPropertyNames(obj2))   // ['2', '10', '02', '01']
+        console.log(Reflect.ownKeys(obj2))  // ['2', '10', '02', '01', Symbol(2), Symbol(1)]
+
+        const obj3 = Object.assign({}, obj1, obj2)
+        const keys3= []
+        for(const key in obj3) {
+            keys3.push(key)
+        }
+        console.log(keys3)  // ['0', '1', '2', '10', 'c', 'a', 'b', '02', '01']
+        console.log(Object.keys(obj3))  // ['0', '1', '2', '10', 'c', 'a', 'b', '02', '01']
+        console.log(Object.getOwnPropertyNames(obj3))   // ['0', '1', '2', '10', 'c', 'a', 'b', '02', '01']
+        console.log(Reflect.ownKeys(obj3))  // ['0', '1', '2', '10', 'c', 'a', 'b', '02', '01', Symbol(2), Symbol(1)]
+
+        ### 숫자가 먼저 오고, 작은수에서 큰수의 순서로. 문자열이 입력된 순서 그대로
+        ### 숫자인데 첫글자가 0이 아닌 경우 -> 숫자로 인식
+        ### 객체의 열거순서: 숫자를 asc. 문자열을 입력된 순서. 심볼을 입력된 순서.
+
+        #### 열거순서는 다음 규칙을 따른다.
+
+        - **number &rarr string &rarr symbol** 의 순서로 정렬된다.
+        - `number` key는 프로퍼티들 중 가장 앞에 위치하며, 오름차순이다.
+        - `string` key는 객체에 추가된 당시의 순서를 유지하면서 숫자 뒤에 위치한다.
+        - `Symbol` key는 객체에 추가된 당시의 순서를 유지하면서 제일 마지막에 위치한다.
+
+        #### number(index)로 인식하는 key는 다음과 같다.
+
+        - 0 이상의, 첫째자리가 0이 아닌 수는, 문자열로 입력해도 똑같이 숫자로 인식한다.
+        - 첫째자리가 0인 두자리 이상의 숫자는 문자열로 입력해야 하고, 문자열로 인식한다.
+        - 음수는 문자열로 입력해야 하고, 문자열로 인식한다.
+
+        **&there4; 'index'로 인식할 수 있는 경우에 한해서만 작은 수부터 나열한다.**
+
+        #### 열거순서를 엄격히 지키는 경우는 다음과 같다.
+
+        - `Object.getOwnPropertyNames()`
+        - `Reflect.ownKeys()`
+        - `Object.assign()`
+
+        #### ES5 하위문법인 다음의 경우에는 정합성을 보장하지 않는다.
+
+        - `for in`
+        - `Object.keys()`
+        - `JSON.stringify()`
+
+        # Arrow Function
+
+        var a = function () {
+            return new Date()
+        }
+        var b = function (a) {
+            return a * a
+        }
+        var c = function (a, b) {
+            return a + b
+        }
+        var d = function (a, b) {
+            console.log( a * b )
+        }
+        var e = function (x) {
+            return {
+                x: x
+            }
+        }
+        var f = function (a) {
+            return function (b) {
+                return a + b;
+            }
+        }
+        // ->
+        var a = () => {
+            return new Date()
+        }
+        var b = (a) => {
+            return a * a
+        }
+        var c = (a, b) => {
+            return a + b
+        }
+        var d = (a, b) => {
+            console.log( a * b )
+        }
+        var e = (x) => {
+            return {
+                x: x
+            }
+        }
+        var f = (a) => {
+            return (b) => {
+                return a + b;
+            }
+        }
+        // ->
+        var a = () => new Date();
+        var b = (a) => a * a
+        var c = (a, b) => a + b
+        var d = (a, b) => {
+            console.log( a * b )
+        }
+        var e = (x) => ({ x: x })
+        var f = (a) => (b) => a + b
+            var y = f(1)
+            var z = y(2)
+            var z = f(1)(2)
+        // ->
+        let a = () => new Date()
+        let b = a => a * a
+        let c = (a, b) => a + b
+        let d = (a, b) => {
+            console.log( a * b )
+        }
+        var e = x => ({ x: x })
+        var f = a => b => a + b
+
+        ## (매개변수) => { 본문 }
+        ## 매개변수가 하나뿐인 경우 괄호 생략 가능
+        ## 매개변수가 없을 경우엔 괄호 필수
+        ## 본문이 `return [식 or 값]` 뿐인 경우 `{ }`와 `return` 키워드 생략 가능
+        ## 위에서 return할 값이 `객체`인 경우엔 괄호 필수
+
+        const f = () => {
+            a: 1,
+            b: 2
+        }
+        // ->
+        const f = () => ({
+            a: 1,
+            b: 2
+        })
+
+        ## 실행컨텍스트 생성시 this 바인딩을 하지 않음
+
+        const obj = {
+            a () {
+                console.log(this)
+                const b = () => {
+                    console.log(this)
+                }
+                b()
+            }
+        }
+        obj.a()
+
+        const a = function () {
+            var x = 10
+        }
+        a();
+        console.log(x); // Uncaught SyntaxError: Identifier 'a' has already been declared
+
+        const a = () => {
+            var x = 10
+        }
+        a();
+        console.log(x); // Uncaught SyntaxError: Identifier 'a' has already been declared
+
+        // arrow function은 '함수스코프'를 생성합니다. 다만, 실행컨텍스트 생성시 this 바인딩 X
+
+        const obj = {
+            grades: [80, 90, 100],
+            getTotal: function () {
+                this.total = 0
+                this.grades.forEach(function(v) {
+                    this.total += v
+                })
+            }
+        }
+        obj.getTotal()
+        console.log(total)  // NaN
+        console.log(obj.total)  // 0
+        console.log(window.total)  // NaN
+        // ->
+        var total = 0;
+        const obj = {
+            grades: [80, 90, 100],
+            getTotal: function () {
+                this.total = 0
+                this.grades.forEach(function(v) {
+                    this.total += v
+                })
+            }
+        }
+        obj.getTotal()
+        console.log(total)  // 270
+        console.log(obj.total)  // 0
+        console.log(window.total)  // 270
+        // ->
+        var total = 0;
+        const obj = {
+            grades: [80, 90, 100],
+            getTotal: function () {
+                this.total = 0
+                this.grades.forEach(function(v) {
+                    this.total += v
+                }, this)
+            }
+        }
+        obj.getTotal()
+        console.log(total)  // 0
+        console.log(obj.total)  // 270
+        console.log(window.total)  // 0
+        // ->  
+        var total = 0;
+        const obj = {
+            grades: [80, 90, 100],
+            getTotal: function () {
+                this.total = 0
+                this.grades.forEach(v => {
+                    this.total += v
+                })
+            }
+        }
+        obj.getTotal()
+        console.log(total)  // 0
+        console.log(obj.total)  // 270
+        console.log(window.total)  // 0
+
+        ## 명시적 this 바인딩 ?
+
+        const c = function () {
+            console.log(this)
+        }
+        c() // window
+        c.call({})  // {}
+
+        const a = () => {
+            console.log(this)
+        }
+        a() // window
+        a.call({})  // window
+        a.call({a: 1})  // window
+
+        const a = (...rest) => {
+            console.log(this, rest)
+        }
+        a.call({a: 1}, 1, 2, 3)
+        a.apply([], [4, 5, 6])
+        const b = a.bind(null, 7, 8, 9, 10)
+        b()
+
+const obj = {
+    f() {
+        const a = (...rest) => {
+            console.log(this, rest)
+        }
+        a.call({a: 1}, 1, 2, 3)
+        a.apply([], [4, 5, 6])
+        const b = a.bind(null, 7, 8, 9, 10)
+        b()
+    }
+}
+obj.f()
+
+## 생성자함수로 ?
+
+const P = (name) => {
+    this.name = name
+}
+const j = new P('재남')
+
+console.dir(P)
+
+## 그밖에 this 외에도 super, arguments, new.target 등을 바인딩하지 않는다.
+
+        # Function
+        ## name property
+        ## new.target
+        ## 함수선언문과 스코프
+        # Destructuring assignment
+        ## 배열의 해체할당
+        ## 객체의 해체할당
+        */
+
+    </script>
+</body>
+
+</html>

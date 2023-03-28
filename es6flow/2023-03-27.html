@@ -355,6 +355,18 @@ World!`)
 
         # rest parameter (나머지 매개변수)
 
+        https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
+
+        function sum(...theArgs) {
+            let total = 0;
+            for (const arg of theArgs) {
+                total += arg;
+            }
+            return total;
+        }
+        console.log(sum(1, 2, 3));  // 6
+        console.log(sum(1, 2, 3, 4));   // 10
+
         function foo (a, b) {
             a = 1
             arguments[0] = 2
