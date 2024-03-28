@@ -22,8 +22,12 @@ fedev
 ### 이론 : 생활코딩
 
 Link : [생활코딩](https://ioabcoi.github.io/fedev/ "생활코딩")
+Link : [youtube](https://www.youtube.com/watch?v=PZIPsKgWJiw&list=PLuHgQVnccGMA4uSig3hCjl7wTDeyIeZVU "youtube")
 
-Link : [youtube ](https://www.youtube.com/watch?v=PZIPsKgWJiw&list=PLuHgQVnccGMA4uSig3hCjl7wTDeyIeZVU "youtube")
+## es6flow
+### 이론 : Javascript ES6+ 제대로 알아보기 - 초급
+
+Link : [inflearn](https://www.inflearn.com/course/ecmascript-6-flow/ "inflearn")
 
 ## javascriptFlow
 ### 이론 : javascript 핵심 개념 알아보기 - JS Flow
@@ -45,24 +49,23 @@ Link : [inflearn](https://www.inflearn.com/course/자바스크립트-es6-보너�
 ### 실습 : nomadcoders
 
 Link : [nomadcoders](https://nomadcoders.co/javascript-for-beginners "nomadcoders")
-
 Link : [github](https://github.com/nomadcoders/js-basics "github")
-
+Link : [github](https://github.com/nomadcoders/javascript-for-beginners "github")
 Link : [youtube](https://www.youtube.com/watch?v=wUHncG3VwPw&list=PLLUCyU7SBaR7tOMe-ySJ5Uu1UlEBznxTr "youtube")
+
+## javascriptForBeginners2
+### 실습 : nomadcoders
+
+Link : [nomadcoders](https://nomadcoders.co/javascript-for-beginners-2 "nomadcoders")
 
 ## learnVueJs
 ### 실습 : 캡틴판교 : vue.js 시작하기 - Age of vue.js
 
 Link : [inflearn](https://www.inflearn.com/course/Age-of-Vuejs/lecture/21395?tab=curriculum "inflearn")
-
 Link : [github](https://github.com/joshua1988/learn-vue-js "github")
-
 Link : [github](https://joshua1988.github.io/vue-camp/ "github")
-
 Link : [guide](https://kr.vuejs.org/v2/guide/ "guide")
-
 Link : [inflearn](https://www.inflearn.com/course/팀개발-깃-깃허브 "inflearn")
-
 Link : [inflearn](http://www.yes24.com/Product/Goods/85382769?Acode=101 "inflearn")
 
 ## vuejs-step02
