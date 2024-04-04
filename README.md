@@ -10,10 +10,10 @@ fedev
 ├─es6flow
 ├─javascriptFlow
 ├─javascriptForBeginners
-│  ├─css
-│  ├─images
-│  └─js
-├─javascriptForBeginners2
+│  ├─chrome-app
+│  │  ├─css
+│  │  ├─images
+│  │  └─js
 │  └─meme-maker
 ├─learnVueJs
 │  ├─getting-started
@@ -50,7 +50,7 @@ Link : [inflearn](https://www.inflearn.com/course/es6-2/ "inflearn")
 
 Link : [inflearn](https://www.inflearn.com/course/자바스크립트-es6-보너스/ "inflearn")
 
-## javascriptForBeginners 
+## javascriptForBeginners : chrome-app
 ### 실습 : nomadcoders
 
 Link : [nomadcoders](https://nomadcoders.co/javascript-for-beginners "nomadcoders")
@@ -58,14 +58,14 @@ Link : [github](https://github.com/nomadcoders/js-basics "github")
 Link : [github](https://github.com/nomadcoders/javascript-for-beginners "github")
 Link : [youtube](https://www.youtube.com/watch?v=wUHncG3VwPw&list=PLLUCyU7SBaR7tOMe-ySJ5Uu1UlEBznxTr "youtube")
 
->> Link : [GU|javascriptForBeginners](https://ioabcoi.github.io/fedev/javascriptForBeginners/index.html "fedev")
+> Link : [GU|javascriptForBeginners:chrome-app](https://ioabcoi.github.io/fedev/javascriptForBeginners/chrome-app/index.html "GU")
 
-## javascriptForBeginners2
+## javascriptForBeginners : meme-maker
 ### 실습 : nomadcoders
 
 Link : [nomadcoders](https://nomadcoders.co/javascript-for-beginners-2 "nomadcoders")
 
->> Link : [GU|javascriptForBeginners2](https://ioabcoi.github.io/fedev/javascriptForBeginners2/index.html "fedev")
+> Link : [GU|javascriptForBeginners:meme-maker](https://ioabcoi.github.io/fedev/javascriptForBeginners/meme-maker/index.html "GU")
 
 ## learnVueJs
 ### 실습 : 캡틴판교 : vue.js 시작하기 - Age of vue.js
