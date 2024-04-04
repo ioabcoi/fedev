@@ -7,20 +7,11 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <canvas></canvas>
     
-    <div class="control_color">
-        <!-- #2.2 Line Width -->
-        <input id="line-width" type="range" min="1" max="10" value="5" step="0.5" />
-
+    <div class="color_options">
         <!-- #2.3 Paint Color part One -->
         <input type="color" id="color" />
 
-        <!-- #2.5 Filling Mode -->
-        <button id="mode-btn">Fill</button>
-    </div>
-    
-    <div class="select_color">
         <!-- #2.4 Paint Color part Two -->
         <div class="color-option" style="background-color:#000000;" data-color="#000000"></div>
         <div class="color-option" style="background-color:#ffffff;" data-color="#ffffff"></div>
@@ -32,6 +23,36 @@
         <div class="color-option" style="background-color:#4a69bd;" data-color="#4a69bd"></div>
         <div class="color-option" style="background-color:#60a3bc;" data-color="#60a3bc"></div>
         <div class="color-option" style="background-color:#78e08f;" data-color="#78e08f"></div>
+    </div>
+
+    <canvas></canvas>
+    
+    <div class="btns">
+        <!-- #2.2 Line Width --><!-- // #3.4 CSS -->
+        <span>▪◼⬛ Pencil Width</span>
+        <input id="line-width" type="range" min="1" max="10" value="5" step="0.5" />
+
+        <!-- #2.5 Filling Mode -->
+        <button id="mode-btn">🩸 Fill</button>
+
+        <!-- #2.7 Recap -->
+        <button id="destroy-btn">💣 Destroy</button>
+        <button id="eraser-btn">❌ Erase</button>
+
+        <!-- #3.0 Adding Images --><!-- // #3.4 CSS -->
+        <label for="file">
+            📷 Add Photo
+            <input type="file" accept="image/*" id="file" />
+        </label>
+        <!-- <input type="file" accept="image/*" id="file" multiple /> -->
+        <!-- multiple 속성을 추가하면 파일을 여러개 업로드할 수 있음. 그래서 event.target.files[0] 파일은 배열에 담겨짐. -->
+
+        <!-- #3.1 Adding Text -->
+        <input type="text" placeholder="Add text here.. :-)" id="text" />
+        <!-- Write and then double click -->
+
+        <!-- #3.2 Saving Image -->
+        <button id="save">💾 Save image</button>
     </div>
 
     <script src="app.js"></script>
