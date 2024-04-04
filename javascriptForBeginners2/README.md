@@ -1,6 +1,6 @@
 # javascriptForBeginners2
 
-Link : [GU | javascriptForBeginners2](https://ioabcoi.github.io/fedev/javascriptForBeginners2/ "javascriptForBeginners2")
+Link : [GU|javascriptForBeginners2](https://ioabcoi.github.io/fedev/javascriptForBeginners2/ "javascriptForBeginners2")
 
 ---------------------------
 
@@ -50,14 +50,14 @@ Link : [GU | javascriptForBeginners2](https://ioabcoi.github.io/fedev/javascript
 2024-03-28
 
 ## 참고
-[Canvas API 공식문서](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API "link")
+[CanvasAPI공식문서](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API "link")
 [벚꽃](https://codepen.io/at80/pen/kyOdeK "link")
 [Spiral](https://codepen.io/hakimel/pen/QdWpRv "link")
-[Falling confetti(색종이)](https://codepen.io/linrock/pen/nMadjQ "link")
-[Parallax Skyline](https://codepen.io/jackrugile/pen/nmexZj "link")
-[Fizzy Sparks](https://codepen.io/waisbren89/pen/gwvVpP "link")
+[FallingConfetti(색종이)](https://codepen.io/linrock/pen/nMadjQ "link")
+[ParallaxSkyline](https://codepen.io/jackrugile/pen/nmexZj "link")
+[FizzySparks](https://codepen.io/waisbren89/pen/gwvVpP "link")
 [Fireworks](https://codepen.io/juliangarnier/pen/gmOwJX "link")
-[Mechanical Grass](https://codepen.io/tholman/pen/DvYNNV "link")
+[MechanicalGrass](https://codepen.io/tholman/pen/DvYNNV "link")
 
 ---------------------------
 2024-04-02
@@ -232,7 +232,7 @@ WebGL API 또한 <canvas> 엘리먼트를 사용하며, 하드웨어 가속 2D �
 
 [JavaScript](https://developer.mozilla.org/ko/docs/Web/JavaScript "link")
 [Html](https://developer.mozilla.org/ko/docs/Web/HTML "link")
-[WebGL API](https://developer.mozilla.org/ko/docs/Web/API/WebGL_API "link")
+[WebGLAPI](https://developer.mozilla.org/ko/docs/Web/API/WebGL_API "link")
 
 > WebGL
 > WebGL(Web Graphics Library)은 플러그인을 사용하지 않고 웹 브라우저에서 상호작용 가능한 3D와 2D 그래픽을 표현하기 위한 JavaScript API입니다. 
@@ -253,9 +253,9 @@ Document.getElementById() 메소드는 HTML <canvas> 엘리먼트에 대한 참�
 
 [getElementById](https://developer.mozilla.org/ko/docs/Web/API/Document/getElementById "link")
 [getContext](https://developer.mozilla.org/ko/docs/Web/API/HTMLCanvasElement/getContext "link")
-[CanvasRenderingContext2D (en-US)](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D "link")
-[fillStyle (en-US)](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle "link")
-[fillRect (en-US)](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillRect "link")
+[CanvasRenderingContext2D(en-US)](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D "link")
+[fillStyle(en-US)](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle "link")
+[fillRect(en-US)](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillRect "link")
 
 ```js
 const canvas = document.getElementById("canvas");
@@ -267,37 +267,37 @@ ctx.fillRect(10, 10, 150, 100);
 
 ### 레퍼런스
 [HTMLCanvasElement](https://developer.mozilla.org/ko/docs/Web/API/HTMLCanvasElement "link")
-[CanvasRenderingContext2D (en-US)](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D "link")
-[CanvasGradient (en-US)](https://developer.mozilla.org/en-US/docs/Web/API/CanvasGradient "link")
-[CanvasImageSource (en-US)](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D "link")
-[CanvasPattern (en-US)](https://developer.mozilla.org/en-US/docs/Web/API/CanvasPattern "link")
-[ImageBitmap (en-US)](https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmap "link")
+[CanvasRenderingContext2D(en-US)](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D "link")
+[CanvasGradient(en-US)](https://developer.mozilla.org/en-US/docs/Web/API/CanvasGradient "link")
+[CanvasImageSource(en-US)](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D "link")
+[CanvasPattern(en-US)](https://developer.mozilla.org/en-US/docs/Web/API/CanvasPattern "link")
+[ImageBitmap(en-US)](https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmap "link")
 [ImageData](https://developer.mozilla.org/ko/docs/Web/API/ImageData "link")
 [RenderingContext]( "link")
-[TextMetrics (en-US)](https://developer.mozilla.org/en-US/docs/Web/API/TextMetrics "link")
-[OffscreenCanvas Experimental](https://developer.mozilla.org/ko/docs/Web/API/OffscreenCanvas "link")
-[Path2D (en-US) Experimental](https://developer.mozilla.org/en-US/docs/Web/API/Path2D "link")
-[ImageBitmapRenderingContext (en-US) Experimental](https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmapRenderingContext "link")
-[CanvasCaptureMediaStream (en-US) Experimental](https://developer.mozilla.org/en-US/docs/Web/API/CanvasCaptureMediaStreamTrack "link")
+[TextMetrics(en-US)](https://developer.mozilla.org/en-US/docs/Web/API/TextMetrics "link")
+[OffscreenCanvasExperimental](https://developer.mozilla.org/ko/docs/Web/API/OffscreenCanvas "link")
+[Path2D(en-US)Experimental](https://developer.mozilla.org/en-US/docs/Web/API/Path2D "link")
+[ImageBitmapRenderingContext(en-US)Experimental](https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmapRenderingContext "link")
+[CanvasCaptureMediaStream(en-US)Experimental](https://developer.mozilla.org/en-US/docs/Web/API/CanvasCaptureMediaStreamTrack "link")
 
 참고: 노트: WebGLRenderingContext에 관련된 인터페이스는 WebGL 하위에 참조되어있습니다.
 CanvasCaptureMediaStream (en-US)은 관련된 인터페이스입니다.
 
 ### 가이드 및 튜토리얼
 
-[Canvas 튜토리얼](https://developer.mozilla.org/ko/docs/Web/API/Canvas_API/Tutorial "link")
+[Canvas튜토리얼](https://developer.mozilla.org/ko/docs/Web/API/Canvas_API/Tutorial "link")
 Canvas API의 기본적인 사용과 고급 기능 모두를 다루는 이해하기 쉬운 튜토리얼.
 
-[HTML5 Canvas 깊이 살펴보기](https://joshondesign.com/p/books/canvasdeepdive/title.html "link")
+[HTML5Canvas깊이살펴보기](https://joshondesign.com/p/books/canvasdeepdive/title.html "link")
 Canvas API 및 WebGL의 실습, 자세한 소개.
 
-[Canvas 핸드북](https://bucephalus.org/text/CanvasHandbook/CanvasHandbook.html "link")
+[Canvas핸드북](https://bucephalus.org/text/CanvasHandbook/CanvasHandbook.html "link")
 Canvas API에 대한 유용한 레퍼런스.
 
-[데모: A basic ray-caster]( "link")
+[데모:Abasicray-caster]( "link")
 Canvas를 사용한 ray-tracing 애니메이션 데모.
 
-[Canvas를 사용하여 비디오 조작](https://developer.mozilla.org/ko/docs/Web/API/Canvas_API/Manipulating_video_using_canvas "link")
+[Canvas를사용하여비디오조작](https://developer.mozilla.org/ko/docs/Web/API/Canvas_API/Manipulating_video_using_canvas "link")
 <video>와 <canvas>를 조합하여 실시간으로 비디오 데이터를 조작.
 
 [video](https://developer.mozilla.org/ko/docs/Web/HTML/Element/video "link")
@@ -315,7 +315,7 @@ SVG 파싱 기능을 갖춘 오픈소스 캔버스 라이브러리입니다.
 [heatmap.js](https://www.patrick-wied.at/static/heatmapjs/ "link")
 캔버스 기반 데이터 열지도를 생성하기위한 오픈소스 라이브러리입니다.
 
-[JavaScript InfoVis Toolkit](https://thejit.org/ "link")
+[JavaScriptInfoVisToolkit](https://thejit.org/ "link")
 인터렉티브한 데이터 시각화를 생성합니다.
 
 [Konva.js](https://konvajs.org/ "link")
@@ -349,7 +349,7 @@ canvas에서의 창의적인 코딩을 위한 편의성, 컴포넌트 및 컨트
 ---------------------------
 2024-04-04
 
-[Canvas Tutorial](https://developer.mozilla.org/ko/docs/Web/API/Canvas_API/Tutorial "link")
+[CanvasTutorial](https://developer.mozilla.org/ko/docs/Web/API/Canvas_API/Tutorial "link")
 
 
 

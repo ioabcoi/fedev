@@ -1,20 +1,25 @@
 # fedev
 
-Link : [GU | fedev](https://ioabcoi.github.io/fedev/ "fedev")
+Link : [GU|fedev](https://ioabcoi.github.io/fedev/ "fedev")
 
 ```javascript
 
 fedev
 ├─codingEverybody
+├─DataVizForBeginners
 ├─es6flow
 ├─javascriptFlow
 ├─javascriptForBeginners
 │  ├─css
 │  ├─images
 │  └─js
-└─learnVueJs
-    ├─getting-started
-    └─playground
+├─javascriptForBeginners2
+│  └─meme-maker
+├─learnVueJs
+│  ├─getting-started
+│  └─playground
+├─PythonForBeginners
+└─SeleniumForBeginners
 
 ```    
 
@@ -53,10 +58,14 @@ Link : [github](https://github.com/nomadcoders/js-basics "github")
 Link : [github](https://github.com/nomadcoders/javascript-for-beginners "github")
 Link : [youtube](https://www.youtube.com/watch?v=wUHncG3VwPw&list=PLLUCyU7SBaR7tOMe-ySJ5Uu1UlEBznxTr "youtube")
 
+>> Link : [GU|javascriptForBeginners](https://ioabcoi.github.io/fedev/javascriptForBeginners/index.html "fedev")
+
 ## javascriptForBeginners2
 ### 실습 : nomadcoders
 
 Link : [nomadcoders](https://nomadcoders.co/javascript-for-beginners-2 "nomadcoders")
+
+>> Link : [GU|javascriptForBeginners2](https://ioabcoi.github.io/fedev/javascriptForBeginners2/index.html "fedev")
 
 ## learnVueJs
 ### 실습 : 캡틴판교 : vue.js 시작하기 - Age of vue.js
