@@ -1,6 +1,6 @@
-# javascriptForBeginners
+# javascriptForBeginners : chrome-app
 
-Link : [GU | javascriptForBeginners](https://ioabcoi.github.io/fedev/javascriptForBeginners/ "javascriptForBeginners")
+Link : [GU|javascriptForBeginners:chrome-app](https://ioabcoi.github.io/fedev/javascriptForBeginners/chrome-app/index.html "GU")
 
 ---------------------------
 

@@ -1,6 +1,6 @@
-# javascriptForBeginners2
+# javascriptForBeginners : meme-maker
 
-Link : [GU|javascriptForBeginners2](https://ioabcoi.github.io/fedev/javascriptForBeginners2/ "javascriptForBeginners2")
+> Link : [GU|javascriptForBeginners:meme-maker](https://ioabcoi.github.io/fedev/javascriptForBeginners/meme-maker/index.html "GU")
 
 ---------------------------
 
