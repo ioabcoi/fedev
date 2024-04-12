@@ -999,7 +999,7 @@ let fontSize = fontRange.value;
 // console.log(fontWeightOptions.map(e => e.checked).findIndex(e => e).id);
 let fontWeight = fontWeightOptions[fontWeightOptions.map(e => e.checked).findIndex(e => e)].id;  
 // #3.5.3 font Family : input text 의 기본값으로 초기화
-let fontFamily = "Arial";
+let fontFamily = "Calibri";
 
 function onMove(event) {
     if(isPainting) {
@@ -1035,11 +1035,9 @@ function onFontWeightChange(event) {
 function onFontFamilyChange(event) {
     // console.log(event.target.value);
     let myUrl = event.target.value;
-    // console.log(fontFamily, myUrl);
     fontFamily = new FontFace('myfont', 'url(' + myUrl + ')');
-    fontFamily.load().then(() => {
-        ctx.font = fontWeight + ' ' + fontSize + 'px myfont';
-    });
+    // console.log(fontFamily);
+    // console.log(fontFamily, myUrl);
 }
 function onColorChange(event) {
     ctx.strokeStyle = event.target.value;
@@ -1093,10 +1091,13 @@ function onDoubleClick(event) {
         ctx.save();
         ctx.lineWidth = 1;
         // console.log(fontSize, fontWeight);
-        if(fontInput !== "") {
-            
+        console.log(fontFamily);
+        if(fontInput.value !== "") {
+            fontFamily.load().then(() => {
+                ctx.font = fontWeight + ' ' + fontSize + 'px myfont'; 
+            });
         } else {
-            // ctx.font = fontWeight + ' ' + fontSize + 'px Arial';
+            ctx.font = fontWeight + ' ' + fontSize + 'px ' + fontFamily;
         }
         ctx.fillText(text, event.offsetX, event.offsetY);
         ctx.restore();
