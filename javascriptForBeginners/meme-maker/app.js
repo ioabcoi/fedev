@@ -197,8 +197,8 @@ canvas.height = CANVAS_HEIGHT;
     // move draw + line width
 
 // // ctx.lineWidth = 5;
-// const lineWidth = document.getElementById("line-width");                             // input range 불러오기
-// ctx.lineWidth = lineWidth.value;                                                     // input range 의 기본값으로 초기화
+// const lineWidth = document.getElementById("line-width");                             // input range #line-width 불러오기
+// ctx.lineWidth = lineWidth.value;                                                     // input range #line-width 의 기본값으로 초기화
 // let isPainting = false;
 // function onMove(event) {
 //     if(isPainting) {
@@ -218,13 +218,13 @@ canvas.height = CANVAS_HEIGHT;
 // }
 // function onLineWidthChange(event) {
 //     // console.log(event.target.value);
-//     ctx.lineWidth = event.target.value;                                              // input range 값을 가져와서 lineWidth 변경하기
+//     ctx.lineWidth = event.target.value;                                              // input range #line-width 값을 가져와서 lineWidth 변경하기
 // }
 // canvas.addEventListener("mousemove", onMove);
 // canvas.addEventListener("mousedown", startPainting);
 // canvas.addEventListener("mouseup", cancelPainting);
 // canvas.addEventListener("mouseleave", cancelPainting);
-// lineWidth.addEventListener("change", onLineWidthChange);                             // input range 값이 바뀔 때마다 onLineWidthChange 함수 실행
+// lineWidth.addEventListener("change", onLineWidthChange);                             // input range #line-width 값이 바뀔 때마다 onLineWidthChange 함수 실행
 
 
     // #2.3 Paint Color part One
@@ -357,10 +357,10 @@ canvas.height = CANVAS_HEIGHT;
 // function onModeClick(event) {
 //     if(isFilling) {                                                                  // Filling 상태 : isFilling = true 이면?
 //         isFilling = false;                                                           // Draw 상태 : isFilling = false 로 바꾸고
-//         modeBtn.innerText = "Fill";                                                  // mode button 텍스트를 Fill 로 변갱
+//         modeBtn.innerText = "🩸 Fill";                                                  // mode button 텍스트를 Fill 로 변갱
 //     } else {                                                                         // Draw 상태 : isFilling = false 이면?
 //         isFilling = true;                                                            // Filling 상태 : isFilling = true 로 바꾸고
-//         modeBtn.innerText = "Draw";                                                  // mode button 텍스트를 Draw 로 변갱
+//         modeBtn.innerText = "🧹 Draw";                                                  // mode button 텍스트를 Draw 로 변갱
 //     }
 // }
 // function onCanvasClick() { 
@@ -421,10 +421,10 @@ canvas.height = CANVAS_HEIGHT;
 // function onModeClick(event) {
 //     if(isFilling) {
 //         isFilling = false;
-//         modeBtn.innerText = "Fill";
+//         modeBtn.innerText = "🩸 Fill";
 //     } else {
 //         isFilling = true;
-//         modeBtn.innerText = "Draw";
+//         modeBtn.innerText = "🧹 Draw";
 //     }
 // }
 // function onCanvasClick() {
@@ -439,7 +439,7 @@ canvas.height = CANVAS_HEIGHT;
 // function onEraserClick() {
 //     ctx.strokeStyle = "white";                                                       // path 컬러를 흰색으로 변경
 //     isFilling = false;                                                               // Draw 상태 : isFilling = false 로 바꾸고
-//     modeBtn.innerText = "Fill";                                                      // mode button 텍스트를 Fill 로 변갱
+//     modeBtn.innerText = "🩸 Fill";                                                      // mode button 텍스트를 Fill 로 변갱
 // }
 // canvas.addEventListener("mousemove", onMove);
 // canvas.addEventListener("mousedown", startPainting);
@@ -496,10 +496,10 @@ canvas.height = CANVAS_HEIGHT;
 // function onModeClick(event) {
 //     if(isFilling) {
 //         isFilling = false;
-//         modeBtn.innerText = "Fill";
+//         modeBtn.innerText = "🩸 Fill";
 //     } else {
 //         isFilling = true;
-//         modeBtn.innerText = "Draw";
+//         modeBtn.innerText = "🧹 Draw";
 //     }
 // }
 // function onCanvasClick() {
@@ -514,7 +514,7 @@ canvas.height = CANVAS_HEIGHT;
 // function onEraserClick() {
 //     ctx.strokeStyle = "white";
 //     isFilling = false;
-//     modeBtn.innerText = "Fill";
+//     modeBtn.innerText = "🩸 Fill";
 // }
 // canvas.addEventListener("mousemove", onMove);
 // canvas.addEventListener("mousedown", startPainting);
@@ -572,10 +572,10 @@ canvas.height = CANVAS_HEIGHT;
 // function onModeClick(event) {
 //     if(isFilling) {
 //         isFilling = false;
-//         modeBtn.innerText = "Fill";
+//         modeBtn.innerText = "🩸 Fill";
 //     } else {
 //         isFilling = true;
-//         modeBtn.innerText = "Draw";
+//         modeBtn.innerText = "🧹 Draw";
 //     }
 // }
 // function onCanvasClick() {
@@ -590,7 +590,7 @@ canvas.height = CANVAS_HEIGHT;
 // function onEraserClick() {
 //     ctx.strokeStyle = "white";
 //     isFilling = false;
-//     modeBtn.innerText = "Fill";
+//     modeBtn.innerText = "🩸 Fill";
 // }
 // function onFileChange(event) {
 //     // console.dir(event.target);
@@ -669,10 +669,10 @@ canvas.height = CANVAS_HEIGHT;
 // function onModeClick(event) {
 //     if(isFilling) {
 //         isFilling = false;
-//         modeBtn.innerText = "Fill";
+//         modeBtn.innerText = "🩸 Fill";
 //     } else {
 //         isFilling = true;
-//         modeBtn.innerText = "Draw";
+//         modeBtn.innerText = "🧹 Draw";
 //     }
 // }
 // function onCanvasClick() {
@@ -687,7 +687,7 @@ canvas.height = CANVAS_HEIGHT;
 // function onEraserClick() {
 //     ctx.strokeStyle = "white";
 //     isFilling = false;
-//     modeBtn.innerText = "Fill";
+//     modeBtn.innerText = "🩸 Fill";
 // }
 // function onFileChange(event) {
 //     const file = event.target.files[0];
@@ -774,10 +774,10 @@ canvas.height = CANVAS_HEIGHT;
 // function onModeClick(event) {
 //     if(isFilling) {
 //         isFilling = false;
-//         modeBtn.innerText = "Fill";
+//         modeBtn.innerText = "🩸 Fill";
 //     } else {
 //         isFilling = true;
-//         modeBtn.innerText = "Draw";
+//         modeBtn.innerText = "🧹 Draw";
 //     }
 // }
 // function onCanvasClick() {
@@ -792,7 +792,7 @@ canvas.height = CANVAS_HEIGHT;
 // function onEraserClick() {
 //     ctx.strokeStyle = "white";
 //     isFilling = false;
-//     modeBtn.innerText = "Fill";
+//     modeBtn.innerText = "🩸 Fill";
 // }
 // function onFileChange(event) {
 //     const file = event.target.files[0];
@@ -841,24 +841,171 @@ canvas.height = CANVAS_HEIGHT;
 
     // #3.3 Recap
 
+// const lineWidth = document.getElementById("line-width");
+// const color = document.getElementById("color");
+// const colorOptions = Array.from(document.getElementsByClassName("color-option"));
+// const modeBtn = document.getElementById("mode-btn");
+// const destroyBtn = document.getElementById("destroy-btn");
+// const eraserBtn = document.getElementById("eraser-btn");
+// const fileInput = document.getElementById("file");
+// const textInput = document.getElementById("text");
+// const saveBtn = document.getElementById("save");
+
+// ctx.lineWidth = lineWidth.value;
+// ctx.lineCap = "round";
+// let isPainting = false;
+// let isFilling = false;
+// function onMove(event) {
+//     if(isPainting) {
+//         ctx.lineTo(event.offsetX, event.offsetY);
+//         ctx.stroke();
+//         return;
+//     }
+//     ctx.moveTo(event.offsetX, event.offsetY);
+// }
+// function startPainting(event) {
+//     isPainting = true;
+// }
+// function cancelPainting(event) {
+//     isPainting = false;
+//     ctx.beginPath();
+// }
+// function onLineWidthChange(event) {
+//     ctx.lineWidth = event.target.value;
+// }
+// function onColorChange(event) {
+//     ctx.strokeStyle = event.target.value;
+//     ctx.fillStyle = event.target.value;
+// }
+// function onColorClick(event) {
+//     const colorValue = event.target.dataset.color;
+//     ctx.strokeStyle = colorValue;
+//     ctx.fillStyle = colorValue;
+//     color.value = colorValue;
+// }
+// function onModeClick(event) {
+//     if(isFilling) {
+//         isFilling = false;
+//         modeBtn.innerText = "🩸 Fill";
+//     } else {
+//         isFilling = true;
+//         modeBtn.innerText = "🧹 Draw";
+//     }
+// }
+// function onCanvasClick() {
+//     if(isFilling) {
+//         ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+//     }
+// }
+// function onDestroyClick() {
+//     ctx.fillStyle = "white";
+//     ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+// }
+// function onEraserClick() {
+//     ctx.strokeStyle = "white";
+//     isFilling = false;
+//     modeBtn.innerText = "🩸 Fill";
+// }
+// function onFileChange(event) {
+//     const file = event.target.files[0];
+//     const url = URL.createObjectURL(file);
+//     const image = new Image();
+//     image.src = url;
+//     image.onload = function() {
+//         ctx.drawImage(image, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+//         fileInput.value = null;
+//     }
+// }
+// function onDoubleClick(event) {
+//     const text = textInput.value;
+//     if(text !== "") {
+//         ctx.save();
+//         ctx.lineWidth = 1;
+//         ctx.font = "68px Arial";
+//         ctx.fillText(text, event.offsetX, event.offsetY);
+//         ctx.restore();
+//     }
+// }
+// function onSaveClick() {
+//     const url = canvas.toDataURL();
+//     const a = document.createElement("a");
+//     a.href = url;
+//     a.download = "myDrawing.png";
+//     a.click();
+// }
+// canvas.addEventListener("mousemove", onMove);
+// canvas.addEventListener("mousedown", startPainting);
+// canvas.addEventListener("mouseup", cancelPainting);
+// canvas.addEventListener("mouseleave", cancelPainting);
+// canvas.addEventListener("click", onCanvasClick);
+// canvas.addEventListener("dblclick", onDoubleClick);
+// lineWidth.addEventListener("change", onLineWidthChange);
+// color.addEventListener("change", onColorChange);
+// colorOptions.forEach((color) => color.addEventListener("click", onColorClick));
+// modeBtn.addEventListener("click", onModeClick);
+// destroyBtn.addEventListener("click", onDestroyClick);
+// eraserBtn.addEventListener("click", onEraserClick);
+// fileInput.addEventListener("change", onFileChange);
+// saveBtn.addEventListener("click", onSaveClick);
+    
+    
+    // #3.4 CSS
+
+
+    // #3.5 Code Challenge
+    // 텍스트 폰트 스타일 (종류 및 사이즈, 볼드, 스타일) 변경 기능
+
+    // #3.5.1 font Weight
+    // input radio : lighter / normal / bolder
+
+    // #3.5.2 font Size
+    // input range : 10 20 30 40 50 60 70 80 90 100
+
+    // #3.5.3 font Family
+    // input text : FontFace() : url 불러오기
+
+    /*
+    font-style -> input radio : strokeText or FillText
+    line-mode -> input radio : line mode or shape mode : onMove : stroke() -> fill()
+    
+
+    */
+    
 const lineWidth = document.getElementById("line-width");
+// #3.5.2 font Size : input range 불러오기
+const fontRange= document.getElementById("font-size");
 const color = document.getElementById("color");
 const colorOptions = Array.from(document.getElementsByClassName("color-option"));
+// #3.5.1 font Weight : input radio 값들을 배열에 넣기
+const fontWeightOptions = Array.from(document.getElementsByName("font-weight"));
 const modeBtn = document.getElementById("mode-btn");
 const destroyBtn = document.getElementById("destroy-btn");
 const eraserBtn = document.getElementById("eraser-btn");
 const fileInput = document.getElementById("file");
 const textInput = document.getElementById("text");
+// #3.5.3 font Family : input text 불러오기
+const fontInput = document.getElementById("font-family");
 const saveBtn = document.getElementById("save");
 
 ctx.lineWidth = lineWidth.value;
 ctx.lineCap = "round";
 let isPainting = false;
 let isFilling = false;
+// #3.5.2 font Size : input range 의 기본값으로 초기화
+// console.log(fontRange.value);
+let fontSize = fontRange.value;
+// #3.5.1 font Weight : input radio 의 기본값으로 초기화
+// console.log(fontWeightOptions.map(e => e.checked).findIndex(e => e));
+// console.log(fontWeightOptions.map(e => e.checked).findIndex(e => e).id);
+let fontWeight = fontWeightOptions[fontWeightOptions.map(e => e.checked).findIndex(e => e)].id;  
+// #3.5.3 font Family : input text 의 기본값으로 초기화
+let fontFamily = "Arial";
+
 function onMove(event) {
     if(isPainting) {
         ctx.lineTo(event.offsetX, event.offsetY);
         ctx.stroke();
+        // ctx.fill();                                                      // update : 마우스 움직일 때 도형 그리기
         return;
     }
     ctx.moveTo(event.offsetX, event.offsetY);
@@ -868,10 +1015,31 @@ function startPainting(event) {
 }
 function cancelPainting(event) {
     isPainting = false;
+    // ctx.fill();                                                          // update : 마우스 버튼을 뗄 때 도형 그리기
     ctx.beginPath();
 }
 function onLineWidthChange(event) {
     ctx.lineWidth = event.target.value;
+}
+// #3.5.2 font Size : input range 값을 가져와서 fontSize 변경하기
+function onFontSizeChange(event) {
+    fontSize = event.target.value;
+    // console.log(fontSize);
+}
+// #3.5.1 font Weight : input radio :checked 값을 가져와서 fontWeight 변경하기
+function onFontWeightChange(event) {
+    // console.log(event, event.target, event.target.id);
+    fontWeight = event.target.id;
+}
+// #3.5.3 font Family : input text 값을 가져와서 fontFamily 변경하기
+function onFontFamilyChange(event) {
+    // console.log(event.target.value);
+    let myUrl = event.target.value;
+    // console.log(fontFamily, myUrl);
+    fontFamily = new FontFace('myfont', 'url(' + myUrl + ')');
+    fontFamily.load().then(() => {
+        ctx.font = fontWeight + ' ' + fontSize + 'px myfont';
+    });
 }
 function onColorChange(event) {
     ctx.strokeStyle = event.target.value;
@@ -886,10 +1054,10 @@ function onColorClick(event) {
 function onModeClick(event) {
     if(isFilling) {
         isFilling = false;
-        modeBtn.innerText = "Fill";
+        modeBtn.innerText = "🩸 Fill";
     } else {
         isFilling = true;
-        modeBtn.innerText = "Draw";
+        modeBtn.innerText = "🧹 Draw";
     }
 }
 function onCanvasClick() {
@@ -898,16 +1066,16 @@ function onCanvasClick() {
     }
 }
 function onDestroyClick() {
-    ctx.save();                                                             // 99 추가
+    ctx.save();                                                             // update
     ctx.fillStyle = "white";
     ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-    ctx.restore();                                                          // 99 추가
+    ctx.restore();                                                          // update
 }
 function onEraserClick() {
     ctx.strokeStyle = "white";
-    color.value = "#ffffff";                                                // 99 추가
+    color.value = "#ffffff";                                                // update
     isFilling = false;
-    modeBtn.innerText = "Fill";
+    modeBtn.innerText = "🩸 Fill";
 }
 function onFileChange(event) {
     const file = event.target.files[0];
@@ -924,7 +1092,12 @@ function onDoubleClick(event) {
     if(text !== "") {
         ctx.save();
         ctx.lineWidth = 1;
-        ctx.font = "68px Arial";
+        // console.log(fontSize, fontWeight);
+        if(fontInput !== "") {
+            
+        } else {
+            // ctx.font = fontWeight + ' ' + fontSize + 'px Arial';
+        }
         ctx.fillText(text, event.offsetX, event.offsetY);
         ctx.restore();
     }
@@ -943,14 +1116,16 @@ canvas.addEventListener("mouseleave", cancelPainting);
 canvas.addEventListener("click", onCanvasClick);
 canvas.addEventListener("dblclick", onDoubleClick);
 lineWidth.addEventListener("change", onLineWidthChange);
+// #3.5.2 font Size : input range 값이 바뀔 때마다 onFontSizeChange 함수 실행
+fontRange.addEventListener("change", onFontSizeChange);
 color.addEventListener("change", onColorChange);
 colorOptions.forEach((color) => color.addEventListener("click", onColorClick));
+// #3.5.1 font Weight : input radio 값이 바뀔 때마다 onFontWeightChange 함수 실행
+fontWeightOptions.forEach((weight) => weight.addEventListener("change", onFontWeightChange));
 modeBtn.addEventListener("click", onModeClick);
 destroyBtn.addEventListener("click", onDestroyClick);
 eraserBtn.addEventListener("click", onEraserClick);
 fileInput.addEventListener("change", onFileChange);
+// #3.5.3 font Family : input text 값이 바뀔 때마다 onFontFamilyChange 함수 실행
+fontInput.addEventListener("change", onFontFamilyChange);
 saveBtn.addEventListener("click", onSaveClick);
-    
-    
-    // #3.4 CSS
-    // #3.5 Code Challenge
