@@ -357,10 +357,10 @@ canvas.height = CANVAS_HEIGHT;
 // function onModeClick(event) {
 //     if(isFilling) {                                                                  // Filling 상태 : isFilling = true 이면?
 //         isFilling = false;                                                           // Draw 상태 : isFilling = false 로 바꾸고
-//         modeBtn.innerText = "🩸 Fill";                                                  // mode button 텍스트를 Fill 로 변갱
+//         modeBtn.innerText = "🩸 Fill";                                               // mode button 텍스트를 Fill 로 변갱
 //     } else {                                                                         // Draw 상태 : isFilling = false 이면?
 //         isFilling = true;                                                            // Filling 상태 : isFilling = true 로 바꾸고
-//         modeBtn.innerText = "🧹 Draw";                                                  // mode button 텍스트를 Draw 로 변갱
+//         modeBtn.innerText = "🧹 Draw";                                              // mode button 텍스트를 Draw 로 변갱
 //     }
 // }
 // function onCanvasClick() { 
@@ -964,12 +964,14 @@ canvas.height = CANVAS_HEIGHT;
     // #3.5.3 font Family
     // input text : FontFace() : url 불러오기
 
-    /*
-    font-style -> input radio : strokeText or FillText
-    line-mode -> input radio : line mode or shape mode : onMove : stroke() -> fill()
-    
+    // #3.5.4 font Style
+    // input radio : strokeText / FillText
 
-    */
+    // #3.5.5 line or shape
+    // button : line / shape : onMove : stroke() <-> fill()
+
+    // #3.5.6 one more check
+    // destroy button : alert : 정말 지워도 되는지 한번더 확인하고 지우기
     
 const lineWidth = document.getElementById("line-width");
 // #3.5.2 font Size : input range 불러오기
@@ -978,7 +980,11 @@ const color = document.getElementById("color");
 const colorOptions = Array.from(document.getElementsByClassName("color-option"));
 // #3.5.1 font Weight : input radio 값들을 배열에 넣기
 const fontWeightOptions = Array.from(document.getElementsByName("font-weight"));
+// #3.5.4 font Style : input radio 값들을 배열에 넣기
+const fontStyleOptions = Array.from(document.getElementsByName("font-style"));
 const modeBtn = document.getElementById("mode-btn");
+// #3.5.5 line or shape : button 불러오기
+const typeBtn = document.getElementById("type-btn");
 const destroyBtn = document.getElementById("destroy-btn");
 const eraserBtn = document.getElementById("eraser-btn");
 const fileInput = document.getElementById("file");
@@ -991,21 +997,28 @@ ctx.lineWidth = lineWidth.value;
 ctx.lineCap = "round";
 let isPainting = false;
 let isFilling = false;
+// #3.5.5 line or shape : button 의 기본값으로 초기화
+let isShape = false;
 // #3.5.2 font Size : input range 의 기본값으로 초기화
 // console.log(fontRange.value);
 let fontSize = fontRange.value;
 // #3.5.1 font Weight : input radio 의 기본값으로 초기화
 // console.log(fontWeightOptions.map(e => e.checked).findIndex(e => e));
-// console.log(fontWeightOptions.map(e => e.checked).findIndex(e => e).id);
-let fontWeight = fontWeightOptions[fontWeightOptions.map(e => e.checked).findIndex(e => e)].id;  
+let fontWeight = fontWeightOptions[fontWeightOptions.map(e => e.checked).findIndex(e => e)].id;
+// #3.5.4 font Style : input radio 의 기본값으로 초기화
+let fontStyle = fontStyleOptions[fontStyleOptions.map(e => e.checked).findIndex(e => e)].id;
 // #3.5.3 font Family : input text 의 기본값으로 초기화
-let fontFamily = "Calibri";
+let fontFamily = "Arial";
 
 function onMove(event) {
     if(isPainting) {
         ctx.lineTo(event.offsetX, event.offsetY);
-        ctx.stroke();
-        // ctx.fill();                                                      // update : 마우스 움직일 때 도형 그리기
+        // #3.5.5 line or shape : 마우스 움직일 때 도형 그리기
+        if(isShape) {
+            ctx.fill();
+        } else {
+            ctx.stroke();
+        }
         return;
     }
     ctx.moveTo(event.offsetX, event.offsetY);
@@ -1015,7 +1028,8 @@ function startPainting(event) {
 }
 function cancelPainting(event) {
     isPainting = false;
-    // ctx.fill();                                                          // update : 마우스 버튼을 뗄 때 도형 그리기
+    // 마우스 버튼을 뗄 때 도형 그리기
+    // ctx.fill();
     ctx.beginPath();
 }
 function onLineWidthChange(event) {
@@ -1031,12 +1045,24 @@ function onFontWeightChange(event) {
     // console.log(event, event.target, event.target.id);
     fontWeight = event.target.id;
 }
+// #3.5.4 font Style : input radio :checked 값을 가져와서 fontStyle 변경하기
+function onFontStyleChange(event) {
+    // console.log(event, event.target, event.target.id);
+    fontStyle = event.target.id;
+    // console.log(fontStyle);
+}
 // #3.5.3 font Family : input text 값을 가져와서 fontFamily 변경하기
 function onFontFamilyChange(event) {
     // console.log(event.target.value);
     let myUrl = event.target.value;
-    fontFamily = new FontFace('myfont', 'url(' + myUrl + ')');
-    // console.log(fontFamily);
+    if(myUrl !== "") {
+        fontFile = new FontFace('myfont', 'url(' + myUrl + ')');
+        document.fonts.add(fontFile);
+        fontFile.load();
+        fontFamily = "myfont";
+    } else {
+        fontFamily = "Arial";
+    }
     // console.log(fontFamily, myUrl);
 }
 function onColorChange(event) {
@@ -1058,20 +1084,33 @@ function onModeClick(event) {
         modeBtn.innerText = "🧹 Draw";
     }
 }
+// #3.5.5 line or shape : button
+function onTypeClick(event) {
+    if(isShape) {                                           // isShape 상태 : isShape = true 이면?
+        isShape = false;                                    // Draw 상태 : isShape = false 로 바꾸고
+        typeBtn.innerText = "🔘 Shape";                    // type button 텍스트를 Shape 로 변갱
+    } else {                                                // Draw 상태 : isShape = false 이면?
+        isShape = true;                                     // isShape 상태 : isShape = true 로 바꾸고
+        typeBtn.innerText = "➖ Line";                     // type button 텍스트를 Line 로 변갱 
+    }
+}
 function onCanvasClick() {
     if(isFilling) {
         ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
     }
 }
 function onDestroyClick() {
-    ctx.save();                                                             // update
-    ctx.fillStyle = "white";
-    ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-    ctx.restore();                                                          // update
+    // #3.5.6 one more check
+    if(confirm("Do you really want to destroy?")) {
+        ctx.save(); // update
+        ctx.fillStyle = "white";
+        ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+        ctx.restore();  // update
+    }
 }
 function onEraserClick() {
     ctx.strokeStyle = "white";
-    color.value = "#ffffff";                                                // update
+    color.value = "#ffffff";    // update
     isFilling = false;
     modeBtn.innerText = "🩸 Fill";
 }
@@ -1090,16 +1129,15 @@ function onDoubleClick(event) {
     if(text !== "") {
         ctx.save();
         ctx.lineWidth = 1;
-        // console.log(fontSize, fontWeight);
-        console.log(fontFamily);
-        if(fontInput.value !== "") {
-            fontFamily.load().then(() => {
-                ctx.font = fontWeight + ' ' + fontSize + 'px myfont'; 
-            });
+        // console.log(fontWeight, fontSize, fontFamily, fontStyle);
+        // #3.5.1 font Weight, #3.5.2 font Size, #3.5.3 font Family
+        ctx.font = fontWeight + ' ' + fontSize + 'px ' + fontFamily;
+        // #3.5.4 font Style
+        if(fontStyle === "fill") {
+            ctx.fillText(text, event.offsetX, event.offsetY);
         } else {
-            ctx.font = fontWeight + ' ' + fontSize + 'px ' + fontFamily;
+            ctx.strokeText(text, event.offsetX, event.offsetY);
         }
-        ctx.fillText(text, event.offsetX, event.offsetY);
         ctx.restore();
     }
 }
@@ -1123,7 +1161,11 @@ color.addEventListener("change", onColorChange);
 colorOptions.forEach((color) => color.addEventListener("click", onColorClick));
 // #3.5.1 font Weight : input radio 값이 바뀔 때마다 onFontWeightChange 함수 실행
 fontWeightOptions.forEach((weight) => weight.addEventListener("change", onFontWeightChange));
+// #3.5.4 font Style : input radio 값이 바뀔 때마다 onFontStyleChange 함수 실행
+fontStyleOptions.forEach((weight) => weight.addEventListener("change", onFontStyleChange));
 modeBtn.addEventListener("click", onModeClick);
+// #3.5.5 line or shape : button
+typeBtn.addEventListener("click", onTypeClick);
 destroyBtn.addEventListener("click", onDestroyClick);
 eraserBtn.addEventListener("click", onEraserClick);
 fileInput.addEventListener("change", onFileChange);

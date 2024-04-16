@@ -44,6 +44,9 @@
         </ul>
         <input id="line-width" type="range" min="1" max="10" value="5" step="1" />
 
+        <!-- #3.5.5 line or shape -->
+        <button id="type-btn">🔘 Shape</button>
+
         <!-- #2.5 Filling Mode -->
         <button id="mode-btn">🩸 Fill</button>
 
@@ -51,29 +54,28 @@
         <button id="destroy-btn">💣 Destroy</button>
         <button id="eraser-btn">❌ Erase</button>
 
-        <!-- #3.0 Adding Images --><!-- #3.4 CSS -->
-        <label for="file" class="file">
-            📷 Add Photo
-            <input type="file" accept="image/*" id="file" />
-        </label>
-        <!-- <input type="file" accept="image/*" id="file" multiple /> -->
-        <!-- multiple 속성을 추가하면 파일을 여러개 업로드할 수 있음. 그래서 event.target.files[0] 파일은 배열에 담겨짐. -->
+        <strong class="title">Text</strong>
 
         <!-- #3.1 Adding Text -->
-        <input type="text" placeholder="Add text here.. :-)" id="text" />
+        <input type="text" placeholder="Add text" id="text" />
         <!-- Write and then double click -->
 
         <!-- #3.5 Code Challenge -->
         <!-- #3.5.1 font Weight -->
-        <strong class="title">font weight</strong>
         <ul class="range">
             <li><label for="lighter"><input id="lighter" type="radio" name="font-weight" value="lighter" />light</label></li>
             <li><label for="normal"><input id="normal" type="radio" name="font-weight" value="normal" checked />normal</label></li>
             <li><label for="bolder"><input id="bolder" type="radio" name="font-weight" value="bolder" />bold</label></li>
         </ul>
+
+        <!-- #3.5.4 font Style -->
+        <ul class="range">
+            <li><label for="fill"><input id="fill" type="radio" name="font-style" value="fill" checked />fill</label></li>
+            <li><label for="stroke"><input id="stroke" type="radio" name="font-style" value="stroke" />stroke</label></li>
+        </ul>
         
         <!-- #3.5.2 font Size -->
-        <strong class="title">font size</strong>
+        <strong class="title">size</strong>
         <ul class="range">
             <li>10</li>
             <li>20</li>
@@ -89,7 +91,18 @@
         <input id="font-size" type="range" min="10" max="100" value="50" step="10" />
 
         <!-- #3.5.3 font Family -->
-        <input type="text" placeholder="Add font URL here.. :-)" id="font-family" />
+        <input type="text" placeholder="Add font URL" id="font-family" />
+        <!-- ex) https://fonts.gstatic.com/s/whisper/v5/q5uHsoqtKftx74K9qi5IBg.woff2 -->
+
+        <strong class="title">Image</strong>
+
+        <!-- #3.0 Adding Images --><!-- #3.4 CSS -->
+        <label for="file" class="file">
+            📷 Add Image
+            <input type="file" accept="image/*" id="file" />
+        </label>
+        <!-- <input type="file" accept="image/*" id="file" multiple /> -->
+        <!-- multiple 속성을 추가하면 파일을 여러개 업로드할 수 있음. 그래서 event.target.files[0] 파일은 배열에 담겨짐. -->
 
         <!-- #3.2 Saving Image -->
         <button id="save">💾 Save image</button>

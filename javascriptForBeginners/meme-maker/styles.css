@@ -101,6 +101,7 @@ input[type="text"] {
     flex-direction: row;
     box-sizing: border-box;
     padding: 0 5px;
+    margin-bottom: -5px;
     font-size: 10px;
 }
 
