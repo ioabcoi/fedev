@@ -5,7 +5,7 @@ Link : [GU|javascriptForBeginners:chrome-app](https://ioabcoi.github.io/fedev/ja
 ---------------------------
 
 # 강의
-[nomadcoders](https://nomadcoders.co/javascript-for-beginners-2 "nomadcoders")
+[nomadcoders](https://nomadcoders.co/javascript-for-beginners "nomadcoders")
 
 ## 배우는 이론
 - Variables
