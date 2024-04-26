@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf=8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>document</title>
 </head>
+
 <body>
     <div id="app"></div>
     <script>
-        
+
         /*
 
             var a = 10; // 할당
@@ -42,22 +44,22 @@
         var div = document.querySelector("#app");
         var viewModel = {};
 
-        (function(){
-            function init(){
+        (function () {
+            function init() {
                 Object.defineProperty(viewModel, "str", {
                     // 객체 속성에 접근했을 때의 동작을 정의
-                    get: function(){
+                    get: function () {
                         console.log("접근");
                     },
                     // 속성에 값을 할당했을 때의 동작을 정의
-                    set: function(newValue){
+                    set: function (newValue) {
                         console.log("할당", newValue);
                         render(newValue);
                     }
                 });
             }
 
-            function render(value){
+            function render(value) {
                 div.innerHTML = value;
             }
 
@@ -66,4 +68,5 @@
 
     </script>
 </body>
+
 </html>
