@@ -51,7 +51,7 @@ Link : [inflearn](https://www.inflearn.com/course/es6-2/ "inflearn")
 ### learnVueJs
 #### 실습 : 캡틴판교 : vue.js 시작하기 - Age of vue.js
 
-Link : [inflearn](https://www.inflearn.com/course/Age-of-Vuejs/lecture/21395?tab=curriculum "inflearn")
+Link : [inflearn](https://www.inflearn.com/course/Age-of-Vuejs/ "inflearn")
 Link : [github](https://github.com/joshua1988/learn-vue-js "github")
 Link : [github](https://joshua1988.github.io/vue-camp/ "github")
 Link : [guide](https://kr.vuejs.org/v2/guide/ "guide")
@@ -72,6 +72,12 @@ Link : [youtube](https://www.youtube.com/watch?v=wUHncG3VwPw&list=PLLUCyU7SBaR7t
 
 Link : [nomadcoders](https://nomadcoders.co/javascript-for-beginners-2 "nomadcoders")
 > Link : [GU|javascriptForBeginners:meme-maker](https://ioabcoi.github.io/fedev/javascriptForBeginners/meme-maker/index.html "GU")
+
+### javascriptForBeginners : momentum
+#### 실습 : nomadcoders
+
+Link : [nomadcoders](https://nomadcoders.co/javascript-for-beginners "nomadcoders")
+> Link : [GU|javascriptForBeginners:momentum](https://ioabcoi.github.io/fedev/javascriptForBeginners/momentum/index.html "GU")
 
 ---------------------------
 
