@@ -154,19 +154,189 @@ myName = "gugugu";
 console.log("my new name is " + myName);
 
 ---------------------------
-2024-06-21
+2024-06-24
 
 ### 2.4 Booleans
+
+1 true
+0 false
+null
+undefined
+
+const a = null;
+let b;
+console.log(a, b);  // null, undefined
+
 ### 2.5 Arrays
+
+const mon = "mon";
+const tue = "tue";
+const wed = "wed";
+const thu = "thu";
+const fri = "fri";
+const sat = "sat";
+const sun = "sun";
+const daysOfWeek = mon + tue + wed + thu + fri + sat + sun;
+
+const daysOfWeek = ["mon", "tue", "wed", "thu", "fri", "sat"];
+daysOfWeek.push("sun");
+console.log(daysOfWeek, daysOfWeek[0]);
+
 ### 2.6 Objects
+
+const playerName = "9";
+const playerPoints = 999999;
+const playerAge = 99;
+
+const player = {
+    name : "9",
+    points : 999999,
+    age : 99
+}
+console.log(player.name, player.points, player.age);
+player.nickname = "GuGu";
+player.age = 36;
+player.points = player.points + 1;
+console.log(player);
+
 ### 2.7 Functions part One
+
+alert();
+console.log();
+console.log("Hello, 9");
+console.log("Hello, kim");
+console.log("Hello, loy");
+
+function sayHello(nameOfPerson, age){
+    // console.log("Hello, my name is " + nameOfPerson + ". I'm " + age + ".");
+    return `Hello, my name is ${nameOfPerson}. I'm ${age}.`;
+}
+sayHello("9", 36);
+sayHello("kim", 35);
+
 ### 2.8 Functions part Two
+
+function plus(a, b){
+    return a + b;
+}
+function divide(a, b){
+    return a / b;
+}
+function minus(a, b){
+    return a - b;
+}
+function multiply(a, b){
+    return a * b;
+}
+plus(8, 50);
+divide(10, 2);
+minus(50, 10);
+multiply(10, 10);
+
+const player = {
+    name : "9",
+    points : 999999,
+    age : 99,
+    sayHello: function(otherPersonsName){
+        // console.log(`Hello, ${otherPersonsName}! my name is ${player.name}.`);
+        return `Hello, ${otherPersonsName}! my name is ${player.name}.`;
+    }
+}
+player.sayHello("kim");
+
 ### 2.9 Recap
 ### 2.10 Recap II
+
+const calculator = {
+    plus : function(a, b){
+        console.log(a + b);
+    },
+    minus : function(a, b){
+        console.log(a - b);
+    },
+    divide : function(a, b){
+        console.log(a / b);
+    },
+    times : function(a, b){
+        console.log(a * b);
+    },
+    power : function(a, b){
+        console.log(a ** b);
+    }
+}
+calculator.plus(5, 2);
+calculator.minus(5, 2);
+calculator.divide(5, 2);
+calculator.times(5, 2);
+calculator.power(5, 2);
+
 ### 2.11 Returns
 ### 2.12 Recap
+
+const calculator = {
+    plus : function(a, b){
+        return a + b;
+    },
+    minus : function(a, b){
+        return a - b;
+    },
+    divide : function(a, b){
+        return a / b;
+    },
+    times : function(a, b){
+        return a * b;
+    },
+    power : function(a, b){
+        return a ** b;
+    }
+}
+calculator.plus(5, 2);
+calculator.minus(5, 2);
+calculator.divide(5, 2);
+calculator.times(5, 2);
+calculator.power(5, 2);
+const plusResult = calculator.plus(5, 10);
+const minusResult = calculator.minus(plusResult, 5);
+const divideResult = calculator.divide(100, minusResult);
+const timesResult = calculator.times(divideResult, 2);
+const powerResult = calculator.power(timesResult, 2);
+console.log(plusResult, minusResult, divideResult, timesResult, powerResult);
+
+const age = 96;
+function calculateKrAge(ageOfForeigner){
+    ageOfForeigner + 2;
+}
+const krAge = calculateKrAge(96);   // undefined
+
+const age = 96;
+function calculateKrAge(ageOfForeigner){
+    return ageOfForeigner + 2;
+}
+const krAge = calculateKrAge(age);   // 98
+
 ### 2.13 Conditionals
+
+if ... else ...
+
+const age = prompt("how old are you?");
+console.log(age, typeof age, parseInt(age), typeof parseInt(age));
+
+const age = parseInt(prompt("how old are you?"));
+console.log(age, typeof age);
+
+"lalalal" -> NaN (Not a Number)
+
+string -> number
+parseInt()
+Number()
+
+---------------------------
+2024-06-25
+
 ### 2.14 Conditionals part Two
+
+isNaN()
+
 ### 2.15 Conditionals part Three
 ### 2.16 Recap
 
