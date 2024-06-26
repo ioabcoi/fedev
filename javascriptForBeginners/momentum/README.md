@@ -86,7 +86,7 @@ html, css만 있었음
 
 ### 1.5 Why JS
 
-three.js
+-three.js
 자바스크립트 기술 깊게 배우고 싶다면 프레임워크로 넘어가면 됨
 react native : 자바스크립트 만으로 안드로이드, ios 앱 만들 수 있음
 일렉트론 : html, css, javascript로 데스크탑 앱 만들 수 있음 : vs code, facebook messenger, twitch, slack, figma 등등
@@ -119,6 +119,7 @@ Integrated Development Environment
 ### 2.1 Basic Data Types
 ### 2.2 Variables
 
+```js
 console.log(5 + 2);
 console.log(5 + 2);
 console.log(5 + 2);
@@ -132,9 +133,11 @@ const b = 2;
 console.log(a + b);
 console.log(a * b);
 console.log(a / b);
+```
 
 ### 2.3 const and let
 
+```js
 let     // 재선언 X 재할당 O
 const   // 재선언 X 재할당 X
 
@@ -152,23 +155,27 @@ b = 6;              // error
 let myName "gugu"   // error
 myName = "gugugu";
 console.log("my new name is " + myName);
+```
 
 ---------------------------
 2024-06-24
 
 ### 2.4 Booleans
 
-1 true
-0 false
-null
-undefined
+```js
+// 1 true
+// 0 false
+// null
+// undefined
 
 const a = null;
 let b;
 console.log(a, b);  // null, undefined
+```
 
 ### 2.5 Arrays
 
+```js
 const mon = "mon";
 const tue = "tue";
 const wed = "wed";
@@ -181,9 +188,11 @@ const daysOfWeek = mon + tue + wed + thu + fri + sat + sun;
 const daysOfWeek = ["mon", "tue", "wed", "thu", "fri", "sat"];
 daysOfWeek.push("sun");
 console.log(daysOfWeek, daysOfWeek[0]);
+```
 
 ### 2.6 Objects
 
+```js
 const playerName = "9";
 const playerPoints = 999999;
 const playerAge = 99;
@@ -198,9 +207,11 @@ player.nickname = "GuGu";
 player.age = 36;
 player.points = player.points + 1;
 console.log(player);
+```
 
 ### 2.7 Functions part One
 
+```js
 alert();
 console.log();
 console.log("Hello, 9");
@@ -213,9 +224,11 @@ function sayHello(nameOfPerson, age){
 }
 sayHello("9", 36);
 sayHello("kim", 35);
+```
 
 ### 2.8 Functions part Two
 
+```js
 function plus(a, b){
     return a + b;
 }
@@ -243,10 +256,12 @@ const player = {
     }
 }
 player.sayHello("kim");
+```
 
 ### 2.9 Recap
 ### 2.10 Recap II
 
+```js
 const calculator = {
     plus : function(a, b){
         console.log(a + b);
@@ -269,10 +284,12 @@ calculator.minus(5, 2);
 calculator.divide(5, 2);
 calculator.times(5, 2);
 calculator.power(5, 2);
+```
 
 ### 2.11 Returns
 ### 2.12 Recap
 
+```js
 const calculator = {
     plus : function(a, b){
         return a + b;
@@ -313,9 +330,11 @@ function calculateKrAge(ageOfForeigner){
     return ageOfForeigner + 2;
 }
 const krAge = calculateKrAge(age);   // 98
+```
 
 ### 2.13 Conditionals
 
+```js
 if ... else ...
 
 const age = prompt("how old are you?");
@@ -324,24 +343,82 @@ console.log(age, typeof age, parseInt(age), typeof parseInt(age));
 const age = parseInt(prompt("how old are you?"));
 console.log(age, typeof age);
 
-"lalalal" -> NaN (Not a Number)
+// "lalalal" -> NaN (Not a Number)
 
-string -> number
-parseInt()
-Number()
+// string -> number
+// parseInt()
+// Number()
+```
 
 ---------------------------
 2024-06-25
 
 ### 2.14 Conditionals part Two
 
-isNaN()
+```js
+isNaN();
+
+const age = parseInt(prompt("how old are you?"));
+console.log(isNaN(age));    // false -> number
+console.log(isNaN(age));    // true -> not a number
+
+if (condition){
+    // condition === true
+}
+
+if (condition){
+    // condition === true
+} else {
+    // condition === false
+}
+
+const age = parseInt(prompt("how old are you?"));
+if (isNaN(age)){
+    console.log("Please write a number.");
+} else {
+    console.log("Thank you for writing your age.");
+}
+```
 
 ### 2.15 Conditionals part Three
 ### 2.16 Recap
 
+```js
+const age = parseInt(prompt("how old are you?"));
+if (isNaN(age) || age < 0){
+    console.log("Please write a real positive number.");
+} else if (age < 18){
+    console.log("You are too young.");
+} else if (age >= 18 && age <= 50){
+    console.log("You can drink.");
+} else if (age > 50 && age <= 80){
+    console.log("You should exercise.");
+} else if (age > 80) {
+    console.log("You can do whatever you want.");
+}
+
+// AMD
+// true && true === true
+// true && false === false
+// false && true === false
+// false && false === false
+
+// OR
+// true || true === true
+// true || false === true
+// false || true === true
+// false || false === false
+```
+
+---------------------------
+2024-06-26
+
 ### 3 JAVASCRIPT ON THE BROWSER
 ### 3.0 The Document Object
+
+```js
+```
+
 ### 3.1 HTML in Javascript
 ### 3.2 Searching For Elements
 ### 3.3 Events
