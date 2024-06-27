@@ -417,16 +417,179 @@ if (isNaN(age) || age < 0){
 ### 3.0 The Document Object
 
 ```js
+document
+document.title
+document.title = "Hi";
+document.head
+document.body
+console.dir(document);
 ```
 
 ### 3.1 HTML in Javascript
+
+```js
+<h1 autofocus id="title" class="hello">Grab me!</h1>
+const title = document.getElementById("title");
+document.getElementById("title").innerText = "Got you!"
+document.getElementById("title").autofocus
+document.getElementById("title").id
+document.getElementById("title").className
+```
+
+---------------------------
+2024-06-27
+
 ### 3.2 Searching For Elements
+
+```js
+<h1 class="hello">Grab me!</h1>
+<h1 class="hello">Grab me!</h1>
+<h1 class="hello">Grab me!</h1>
+const hellos = document.getElementByClassName("hello");
+
+<div class="hello">
+    <h1>Grab me!</h1>
+</div>
+const title = document.getElementByTagName("h1");
+console.log(title);
+const title = document.querySelector(".hello h1");
+console.log(title);
+
+<div class="hello">
+    <h1>Grab me 1!</h1>
+</div>
+<div class="hello">
+    <h1>Grab me 2!</h1>
+</div>
+<div class="hello">
+    <h1>Grab me 3!</h1>
+</div>
+const title = document.querySelectorAll(".hello h1");
+console.log(title);
+```
+
 ### 3.3 Events
+
+```js
+console.log();
+console.dir();
+
+<div class="hello">
+    <h1>Grab me 1!</h1>
+</div>
+<div class="hello">
+    <h1>Grab me 2!</h1>
+</div>
+<div class="hello">
+    <h1>Grab me 3!</h1>
+</div>
+const title = document.querySelector("div.hello:first-child h1");
+// title.style.color = "blue";
+function handleTitleClick(){
+    console.log("title was clicked!");
+}
+title.addEventListener("click", handleTitleClick);
+// title.onclick = handleTitleClick;
+```
+
 ### 3.4 Events part Two
+
+```js
+<div class="hello">
+    <h1>Grab me 1!</h1>
+</div>
+<div class="hello">
+    <h1>Grab me 2!</h1>
+</div>
+<div class="hello">
+    <h1>Grab me 3!</h1>
+</div>
+const title = document.querySelector("div.hello:first-child h1");
+function handleMouseEnter(){
+    // console.log("mouse is here!");
+    title.innerText = "Mouse is here!";
+}
+function handleMouseLeave(){
+    title.innerText = "Mouse is gone!";
+}
+title.addEventListener("mouseenter", handleMouseEnter);
+// title.onmouseenter = handleMouseEnter;
+title.addEventListener("mouseleave", handleMouseLeave);
+// title.onmouseleave = handleMouseLeave;
+
+// addEventListenr 를 더 선호하는 이유는 .removeEventListenr 로 제거할 수 있고, 다루기 더 좋음
+```
+
 ### 3.5 More Events
+
+```js
+function handleWindowResize(){
+    document.body.style.backgroundColor = "tomato";
+}
+function handleWindowCopy(){
+    alert("copy!!!");
+}
+function handleWindowOffline(){
+    alert("SOS no WIFI!!!");
+}
+function handleWindowOnline(){
+    alert("All Good!!!");
+}
+window.addEventListener("resize", handleWindowResize);
+window.addEventListener("copy", handleWindowCopy);
+window.addEventListener("offline", handleWindowOffline);
+window.addEventListener("online", handleWindowOnline);
+```
+
 ### 3.6 CSS in Javascript
+
+```js
+const h1 = document.querySelector("h1");
+function handleTitleClick(){
+    const currentColor = h1.style.color;
+    let newColor;
+    if (currentColor === "blue") {
+        newColor = "tomato";
+    } else {
+        newColor = "blue";
+    }
+    h1.style.color = newColor;
+}
+h1.addEventListener("click", handleTitleClick);
+```
+
 ### 3.7 CSS in Javascript part Two
 ### 3.8 CSS in Javascript part Three
+
+```js
+/*
+h1 {
+    color: cornflowerblue;
+}
+.clicked {
+    color: tomato;
+}
+*/
+const h1 = document.querySelector("h1");
+function handleTitleClick(){
+    const clickedClass = "clicked";
+    if (h1.classList.contains(clickedClass)) {
+        h1.classList.remove(clickedClass);
+    } else {
+        h1.classList.add(clickedClass);
+    }
+}
+h1.addEventListener("click", handleTitleClick);
+
+const h1 = document.querySelector("h1");
+function handleTitleClick(){
+    h1.classList.toggle("clicked");
+}
+h1.addEventListener("click", handleTitleClick);
+```
+
+---------------------------
+2024-06-28
 
 ### 4 LOGIN
 ### 4.0 Input Values
@@ -464,5 +627,11 @@ if (isNaN(age) || age < 0){
 ### 8.0 Geolocation
 ### 8.1 Weather API
 ### 8.2 Conclusions
+
+---------------------------
+2024-06-26
+
+```js
+```
 
 ---------------------------
