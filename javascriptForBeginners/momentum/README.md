@@ -485,7 +485,7 @@ console.dir();
 </div>
 const title = document.querySelector("div.hello:first-child h1");
 // title.style.color = "blue";
-function handleTitleClick(){
+function handleTitleClick() {
     console.log("title was clicked!");
 }
 title.addEventListener("click", handleTitleClick);
@@ -505,11 +505,11 @@ title.addEventListener("click", handleTitleClick);
     <h1>Grab me 3!</h1>
 </div>
 const title = document.querySelector("div.hello:first-child h1");
-function handleMouseEnter(){
+function handleMouseEnter() {
     // console.log("mouse is here!");
     title.innerText = "Mouse is here!";
 }
-function handleMouseLeave(){
+function handleMouseLeave() {
     title.innerText = "Mouse is gone!";
 }
 title.addEventListener("mouseenter", handleMouseEnter);
@@ -523,16 +523,16 @@ title.addEventListener("mouseleave", handleMouseLeave);
 ### 3.5 More Events
 
 ```js
-function handleWindowResize(){
+function handleWindowResize() {
     document.body.style.backgroundColor = "tomato";
 }
-function handleWindowCopy(){
+function handleWindowCopy() {
     alert("copy!!!");
 }
-function handleWindowOffline(){
+function handleWindowOffline() {
     alert("SOS no WIFI!!!");
 }
-function handleWindowOnline(){
+function handleWindowOnline() {
     alert("All Good!!!");
 }
 window.addEventListener("resize", handleWindowResize);
@@ -544,8 +544,9 @@ window.addEventListener("online", handleWindowOnline);
 ### 3.6 CSS in Javascript
 
 ```js
+<h1>Click me!</h1>
 const h1 = document.querySelector("h1");
-function handleTitleClick(){
+function handleTitleClick() {
     const currentColor = h1.style.color;
     let newColor;
     if (currentColor === "blue") {
@@ -570,8 +571,9 @@ h1 {
     color: tomato;
 }
 */
+<h1>Click me!</h1>
 const h1 = document.querySelector("h1");
-function handleTitleClick(){
+function handleTitleClick() {
     const clickedClass = "clicked";
     if (h1.classList.contains(clickedClass)) {
         h1.classList.remove(clickedClass);
@@ -582,7 +584,7 @@ function handleTitleClick(){
 h1.addEventListener("click", handleTitleClick);
 
 const h1 = document.querySelector("h1");
-function handleTitleClick(){
+function handleTitleClick() {
     h1.classList.toggle("clicked");
 }
 h1.addEventListener("click", handleTitleClick);
@@ -594,8 +596,53 @@ h1.addEventListener("click", handleTitleClick);
 ### 4 LOGIN
 ### 4.0 Input Values
 ### 4.1 Form Submission
+
+```js
+const loginForm = document.getElementById("login-form");
+const loginInput = loginForm.querySelector("input");
+const loginButton = loginForm.querySelector("button");
+function onLoginBtnClick(){
+    // console.dir(loginInput);
+    // console.log("click!");
+    // console.log(loginInput.value);
+
+    const username = loginInput.value;
+    if (username === "") {
+        alert("Please write your name.");
+    } else if (username.length > 15) {
+        alert("Your name is too long.");
+    }
+}
+loginButton.addEventListener("click", onLoginBtnClick);
+```
+
 ### 4.2 Events
+
+```js
+const loginForm = document.querySelector("#login-form");
+const loginInput = loginForm.querySelector("input");
+function onLoginSubmit(event){
+    event.preventDefault();
+    // console.log(event);
+    const username = loginInput.value;
+    console.log(username);
+}
+loginForm.addEventListener("submit", onLoginSubmit);
+```
+
 ### 4.3 Events part Two
+
+```js
+<a href="http://nomadcoders.co">Go to courses</a>
+const link = document.querySelector("a");
+function handleLinkClick(event) {
+    // alert();
+    event.preventDefault();
+    console.dir(event);
+}
+link.addEventListener("click", handleLinkClick);
+```
+
 ### 4.4 Getting Username
 ### 4.5 Saving Username
 ### 4.6 Loading Username
