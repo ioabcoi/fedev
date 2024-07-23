@@ -643,10 +643,26 @@ function handleLinkClick(event) {
 link.addEventListener("click", handleLinkClick);
 ```
 
+---------------------------
+2024-07-23
+
 ### 4.4 Getting Username
 ### 4.5 Saving Username
 ### 4.6 Loading Username
 ### 4.7 Super Recap
+
+```js
+loginForm.classList.add("hidden");
+greeting.classList.remove("hidden");
+
+greeting.innerText = `Hello! ${username}`;
+"Hello! " + username
+`Hello! ${username}`
+
+localStorage.setItem("username", "gu");
+localStorage.getItem("username");
+localStorage.removeItem("username");
+```
 
 ### 5 CLOCK
 ### 5.0 Intervals
@@ -654,7 +670,46 @@ link.addEventListener("click", handleLinkClick);
 ### 5.2 PadStart
 ### 5.3 Recap
 
+```js
+setInterval(sayHello, 5000);
+setTimeout(sayHello, 5000);
+
+const date = new Date();
+date.getDate();
+date.getDay();
+date.getFullYear();
+date.getHours();
+date.getMinutes();
+date.getSeconds();
+
+padStart();
+padEnd();
+
+const hours = String(date.getHours()).padStart(2, "0");
+const minutes = String(date.getMinutes()).padStart(2, "0");
+const seconds = String(date.getSeconds()).padStart(2, "0");
+clock.innerText = `${hours}:${minutes}:${seconds}`;
+```
+
+---------------------------
+2024-07-25
+
 ### 6 QUOTES AND BACKGROUND
+
+- Time waits for no ones.
+- If you don't know where you're going, just go.
+- Love me like there's no tomorrow.
+- Everything happens for a reason.
+- Everything I do always comes back to me.
+- Worrying solves nothing.
+- Everything changes but Nothing changes.
+- Be yourself.
+- If it's meant to be It will be.
+- Worrying will never change the outcome.
+
+```js
+```
+
 ### 6.0 Quotes
 ### 6.1 Background
 ### 6.2 Recap
