@@ -692,9 +692,12 @@ clock.innerText = `${hours}:${minutes}:${seconds}`;
 ```
 
 ---------------------------
-2024-07-25
+2024-08-07
 
 ### 6 QUOTES AND BACKGROUND
+### 6.0 Quotes
+### 6.1 Background
+### 6.2 Recap
 
 - Time waits for no ones.
 - If you don't know where you're going, just go.
@@ -708,11 +711,22 @@ clock.innerText = `${hours}:${minutes}:${seconds}`;
 - Worrying will never change the outcome.
 
 ```js
+Math.random();                      // 0 ~ 0.99999.....
+Math.random() * 10;                 // 0 ~ 9.99999.....
+Math.floor(Math.random() * 10);     // 0 ~ 9
+Math.floor(Math.random() * 4);      // 0 ~ 3
+Math.round()                        // 반올림
+Math.ceil()                         // 올림
+Math.floor()                        // 내림
+
+quote.innerText = todaysQuote.quote;
+const bgImage = document.createElement("img");
+document.body.prepend(bgImage);
+document.body.appendChild(bgImage);
 ```
 
-### 6.0 Quotes
-### 6.1 Background
-### 6.2 Recap
+---------------------------
+2024-08-08
 
 ### 7 TO DO LIST
 ### 7.0 Setup
