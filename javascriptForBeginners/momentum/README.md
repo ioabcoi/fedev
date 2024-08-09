@@ -726,11 +726,15 @@ document.body.appendChild(bgImage);
 ```
 
 ---------------------------
-2024-08-08
+2024-08-00
 
 ### 7 TO DO LIST
 ### 7.0 Setup
 ### 7.1 Adding ToDos
+
+---------------------------
+2024-08-00
+
 ### 7.2 Deleting To Dos
 ### 7.3 Saving To Dos
 ### 7.4 Loading To Dos part One

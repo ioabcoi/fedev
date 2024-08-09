@@ -99,8 +99,20 @@ Link : [inflearn](https://www.inflearn.com/course/자바스크립트-es6-보너�
 ### reactForBeginners : twitter-clone
 #### 실습 : nomadcoders
 
-[nomadcoders]([nomadcoders](https://nomadcoders.co/nwitter "nomadcoders") "nomadcoders")
+[nomadcoders](https://nomadcoders.co/nwitter "nomadcoders")
 > Link : [GU|reactForBeginners:twitter-clone](https://ioabcoi.github.io/fedev/reactForBeginners/twitter-clone/index.html "GU")
+
+### typescriptForBeginners : block-chain
+#### 실습 : nomadcoders
+
+[nomadcoders](https://nomadcoders.co/typescript-for-beginners "nomadcoders")
+> Link : [GU|typescriptForBeginners:block-chain](https://ioabcoi.github.io/fedev/typescriptForBeginners/block-chain/index.html "GU")
+
+### typescriptForBeginners : nestjs-fundamentals
+#### 실습 : nomadcoders
+
+[nomadcoders](https://nomadcoders.co/nestjs-fundamentals "nomadcoders")
+> Link : [GU|typescriptForBeginners:nestjs-fundamentals](https://ioabcoi.github.io/fedev/typescriptForBeginners/nestjs-fundamentals/index.html "GU")
 
 ### vuejs-step02
 #### 실습 : vue.js 끝장내기 - 실무에 필요한 모든 것
