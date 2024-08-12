@@ -726,27 +726,88 @@ document.body.appendChild(bgImage);
 ```
 
 ---------------------------
-2024-08-00
+2024-08-07
 
 ### 7 TO DO LIST
 ### 7.0 Setup
 ### 7.1 Adding ToDos
 
+```js
+const li = document.createElement("li");
+const span = document.createElement("span");
+span.innerText = newToDo;
+const button = document.createElement("button");
+button.innerText = "❌";
+button.addEventListener("click", deleteToDo);
+li.appendChild(span);
+li.appendChild(button);
+toDoList.appendChild(li);
+```
+
 ---------------------------
-2024-08-00
+2024-08-12
 
 ### 7.2 Deleting To Dos
+
+```js
+const li = event.target.parentElement;
+li.remove();
+```
+
 ### 7.3 Saving To Dos
+
+```js
+const toDos = [];
+toDos.push(newToDo);
+localStorage.setItem("todos", toDos);
+JSON.stringify(obj);    // to string
+localStorage.setItem("todos", JSON.stringify(toDos));
+```
+
+---------------------------
+2024-08-13
+
 ### 7.4 Loading To Dos part One
+
+```js
+```
+
 ### 7.5 Loading To Dos part Two
+
+```js
+```
+
 ### 7.6 Deleting To Dos part One
+
+```js
+```
+
 ### 7.7 Deleting To Dos part Two
+
+```js
+```
+
 ### 7.8 Deleting To Dos part Three
+
+```js
+```
 
 ### 8 WEATHER
 ### 8.0 Geolocation
+
+```js
+```
+
 ### 8.1 Weather API
+
+```js
+```
+
 ### 8.2 Conclusions
+
+```js
+```
+
 
 ---------------------------
 2024-06-26
