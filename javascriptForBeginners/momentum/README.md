@@ -765,17 +765,30 @@ localStorage.setItem("todos", JSON.stringify(toDos));
 ```
 
 ---------------------------
-2024-08-13
+2024-08-30
 
 ### 7.4 Loading To Dos part One
-
-```js
-```
-
 ### 7.5 Loading To Dos part Two
 
 ```js
+JSON.stringify(obj);    // to string
+JSON.parse(obj);        // to array
+
+JSON.parse(localStorage.getItem("todos"));
+===
+const TODOS_KEY = "todos";
+JSON.parse(localStorage.getItem(TODOS_KEY));
+
+function sayHello(item) {
+    console.log("this is the turn of", item);
+}
+parsedToDos.forEach(sayHello);
+===
+parsedToDos.forEach((item) => console.log("this is the turn of", item));
 ```
+
+---------------------------
+2024-09-02
 
 ### 7.6 Deleting To Dos part One
 
@@ -791,6 +804,9 @@ localStorage.setItem("todos", JSON.stringify(toDos));
 
 ```js
 ```
+
+---------------------------
+2024-09-03
 
 ### 8 WEATHER
 ### 8.0 Geolocation
