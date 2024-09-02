@@ -791,18 +791,32 @@ parsedToDos.forEach((item) => console.log("this is the turn of", item));
 2024-09-02
 
 ### 7.6 Deleting To Dos part One
-
-```js
-```
-
 ### 7.7 Deleting To Dos part Two
-
-```js
-```
-
 ### 7.8 Deleting To Dos part Three
 
 ```js
+// remove
+const li = event.target.parentElement;
+li.remove();
+// const removeToDos = toDos.filter(toDo => toDo.id !== parseInt(li.id));
+// toDos = removeToDos;
+toDos = toDos.filter(toDo => toDo.id !== parseInt(li.id));
+saveToDos();
+
+// paint
+const li = document.createElement("li");
+li.id = newToDo.id;
+const span = document.createElement("span");
+span.innerText = newToDo.text;
+
+const newToDoObj = {
+    text: newToDo,
+    id: Date.now(),
+};
+toDos.push(newToDoObj);
+paintToDo(newToDoObj);
+
+
 ```
 
 ---------------------------

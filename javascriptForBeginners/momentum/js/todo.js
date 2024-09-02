@@ -11,14 +11,23 @@ function saveToDos() {
 function deleteToDo(event) {
     // console.log(event, event.target, event.target.parentElement, event.target.parentElement.innerText);
     const li = event.target.parentElement;
+    // console.log(li.id);
     li.remove();
+    // console.log(toDos.filter(item => console.log(item.id, typeof item.id, li.id, typeof li.id, parseInt(li.id))));
+    // const removeToDos = toDos.filter(toDo => toDo.id !== parseInt(li.id));
+    // console.log(removeToDos);
+    // toDos = removeToDos;
+    toDos = toDos.filter(toDo => toDo.id !== parseInt(li.id));    
+    saveToDos();
 }
 
 function paintToDo(newToDo) {
     // console.log(newToDo);
     const li = document.createElement("li");
+    li.id = newToDo.id;
     const span = document.createElement("span");
-    span.innerText = newToDo;
+    // span.innerText = newToDo;
+    span.innerText = newToDo.text;
     const button = document.createElement("button");
     button.innerText = "❌";
     button.addEventListener("click", deleteToDo);
@@ -34,8 +43,14 @@ function handleToDoSubmit(event) {
     const newToDo = toDoInput.value;
     toDoInput.value = "";
     // console.log(newTodo);
-    toDos.push(newToDo);
-    paintToDo(newToDo);
+    // toDos.push(newToDo);
+    // paintToDo(newToDo);
+    const newToDoObj = {
+        text: newToDo,
+        id: Date.now(),
+    };
+    toDos.push(newToDoObj);
+    paintToDo(newToDoObj);
     saveToDos();
 }
 
@@ -55,5 +70,6 @@ if (savedToDos !== null) {
 
     // parsedToDos.forEach((item) => console.log("this is the turn of", item));
     // parsedToDos.forEach(sayHello);
-    parsedToDos.forEach((item) => paintToDo(item));
+    // parsedToDos.forEach((item) => paintToDo(item));
+    parsedToDos.forEach(paintToDo);
 }
