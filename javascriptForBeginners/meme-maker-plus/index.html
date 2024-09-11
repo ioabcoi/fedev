@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Maker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="container">
+        <section class="left-section">
+            <div class="color_options">
+                <input type="color" id="color" />
+
+                <div class="color-option" style="background-color:#000000;" data-color="#000000"></div>
+                <div class="color-option" style="background-color:#444444;" data-color="#444444"></div>
+                <div class="color-option" style="background-color:#999999;" data-color="#999999"></div>
+                <div class="color-option" style="background-color:#ffffff;" data-color="#ffffff"></div>
+                <div class="color-option" style="background-color:#ff0000;" data-color="#ff0000"></div>
+                <div class="color-option" style="background-color:#ff00ff;" data-color="#ff00ff"></div>
+                <div class="color-option" style="background-color:#ffff00;" data-color="#ffff00"></div>
+                <div class="color-option" style="background-color:#00ff00;" data-color="#00ff00"></div>
+                <div class="color-option" style="background-color:#00ffff;" data-color="#00ffff"></div>
+                <div class="color-option" style="background-color:#0000ff;" data-color="#0000ff"></div>
+            </div>
+        </section>
+
+        <section class="center-section">
+            <canvas></canvas>
+        </section>
+
+        <section class="right-section">
+            <div class="btns">
+                <strong class="title">pencil width</strong>
+                <ul class="range">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li>10</li>
+                </ul>
+                <input id="line-width" type="range" min="1" max="10" value="5" step="1" />
+
+                <button id="type-btn">🔘 Shape</button>
+
+                <button id="mode-btn">🩸 Fill</button>
+
+                <button id="destroy-btn">💣 Destroy</button>
+                <button id="eraser-btn">❌ Erase</button>
+
+                <strong class="title">Text</strong>
+
+                <input type="text" placeholder="Add text" id="text" />
+
+                <ul class="range">
+                    <li><label for="lighter"><input id="lighter" type="radio" name="font-weight" value="lighter" />light</label></li>
+                    <li><label for="normal"><input id="normal" type="radio" name="font-weight" value="normal" checked />normal</label></li>
+                    <li><label for="bolder"><input id="bolder" type="radio" name="font-weight" value="bolder" />bold</label></li>
+                </ul>
+
+                <ul class="range">
+                    <li><label for="fill"><input id="fill" type="radio" name="font-style" value="fill" checked />fill</label></li>
+                    <li><label for="stroke"><input id="stroke" type="radio" name="font-style" value="stroke" />stroke</label></li>
+                </ul>
+                
+                <strong class="title">size</strong>
+                <ul class="range">
+                    <li>10</li>
+                    <li>20</li>
+                    <li>30</li>
+                    <li>40</li>
+                    <li>50</li>
+                    <li>60</li>
+                    <li>70</li>
+                    <li>80</li>
+                    <li>90</li>
+                    <li>100</li>
+                </ul>
+                <input id="font-size" type="range" min="10" max="100" value="50" step="10" />
+
+                <input type="text" placeholder="Add font URL" id="font-family" />
+                <!-- ex) https://fonts.gstatic.com/s/whisper/v5/q5uHsoqtKftx74K9qi5IBg.woff2 -->
+
+                <strong class="title">Image</strong>
+
+                <label for="file" class="file">
+                    📷 Add Image
+                    <input type="file" accept="image/*" id="file" />
+                </label>
+                <!-- <input type="file" accept="image/*" id="file" multiple /> -->
+
+                <button id="save">💾 Save image</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
