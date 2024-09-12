@@ -1,12 +1,22 @@
 @import "reset.css";
 
+:root {
+    --first-color: #201E43;
+    --second-color: #134B70;
+    --third-color: #508C9B;
+    --fourth-color: #EEEEEE;
+    --white-color: #fff;
+
+    --padding-medium: 20px;
+    --border-radius-medium: 20px;
+}
+
 body {
     display: flex;
-    gap: 20px;
     justify-content: center;
     align-items: flex-start;
-    background-color: gainsboro;
-    padding: 20px;
+    background-color: var(--first-color);
+    color: var(--first-color);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -14,47 +24,49 @@ body {
     box-sizing: border-box;
 }
 
-/* Style buttons, inputs */
-button,
-input,
-select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+.wrap {
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
 }
 
 .container {
+    flex-wrap: wrap;
     display: flex;
-    height: 100vh;
-    border-radius: 20px;
+    flex-direction: row;
+    border-radius: var(--border-radius-medium);
+    overflow: hidden;
 }
 
-.left-section {
-    width: 25%;
-    background-color: #f5f5f5;
-    padding: 20px;
+/* color_section */
+.color_section {
+    padding: var(--padding-medium);
+    background-color: var(--fourth-color);
 }
 
-.center-section {
-    padding: 20px;
-    background-color: #fff;
-}
-
-.right-section {
-    width: 75%;
-    padding: 20px;
-    background-color: #f5f5f5;
+/* canvas_section */
+.canvas_section {
+    padding: var(--padding-medium);
+    background-color: var(--white-color);
 }
 
 canvas {
     width: 800px;
     height: 800px;
     background-color: white;
-    border-radius: 10px;
+    border-radius: var(--border-radius-medium);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+/* control_section */
+.control_section {
+    padding: var(--padding-medium);
+    background-color: var(--fourth-color);
+}
+
 
 .btns {
     display: flex;
@@ -73,7 +85,7 @@ canvas {
 .color-option {
     width: 50px;
     height: 50px;
-    border: 5px solid white;
+    border: 5px solid var(--white-color);
     border-radius: 50px;
     cursor: pointer;
     transition: transform ease-in-out .3s;
@@ -93,9 +105,9 @@ button,
 .file {
     all: unset;
     padding: 10px;
-    background-color: royalblue;
+    background-color: var(--third-color);
     border-radius: 10px;
-    color: white;
+    color: var(--fourth-color);
     font-weight: 500;
     text-align: center;
     cursor: pointer;
@@ -113,9 +125,9 @@ input#file {
 input[type="text"] {
     all: unset;
     padding: 10px;
-    background-color: white;
+    background-color: var(--white-color);
     border-radius: 10px;
-    color: black;
+    color: var(--first-color);
     font-weight: 500;
     text-align: center;
     cursor: pointer;

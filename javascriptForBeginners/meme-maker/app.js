@@ -1029,7 +1029,7 @@ function startPainting(event) {
 function cancelPainting(event) {
     isPainting = false;
     // 마우스 버튼을 뗄 때 도형 그리기
-    // ctx.fill();
+    ctx.fill();
     ctx.beginPath();
 }
 function onLineWidthChange(event) {
