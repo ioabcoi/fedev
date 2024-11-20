@@ -815,34 +815,37 @@ const newToDoObj = {
 };
 toDos.push(newToDoObj);
 paintToDo(newToDoObj);
-
-
 ```
 
 ---------------------------
-2024-09-03
+2024-11-20
 
 ### 8 WEATHER
 ### 8.0 Geolocation
 
 ```js
+function onGeoOk(position) {
+    const lat = position.coords.latitude;
+    const lng = position.coords.longitude;
+}
+function onGeoError() {
+}
+navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
 ```
 
 ### 8.1 Weather API
-
-```js
-```
-
 ### 8.2 Conclusions
 
 ```js
-```
+// openweathermap.org/api
 
-
----------------------------
-2024-06-26
-
-```js
+const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
+// console.log(url);
+fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data.name, data.weather[0].main, data.main.temp);
+    });
 ```
 
 ---------------------------
