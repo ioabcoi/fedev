@@ -173,6 +173,7 @@ input::placeholder {
 
 #todo-form .text {
     width: var(--width-large);
+    padding: var(--margin-small) 0;
     border-bottom: 1px solid var(--color-white);
 }
 
