@@ -7,29 +7,32 @@
     <title>Momentum</title>
 </head>
 <body>
-    <form id="login-form" class="hidden">
-        <input type="text" name="" id="" placeholder="What is your name?" required maxlength="15">
-        <!-- <button>Log In</button> -->
-        <input type="submit" value="Log In">
-    </form>
-    <h2 id="clock">00:00</h2>
-    <h1 id="greeting" class="hidden"></h1>
-    <form id="todo-form">
-        <input type="text" placeholder="Write a To do and Press Enter" required />
-    </form>
-    <ul id="todo-list">
-        <!-- <li>
-            <span>text</span>
-            <button>X</button>
-        </li> -->
-    </ul>
-    <div id="quote">
-        <span></span>
-        <span></span>
-    </div>
-    <div id="weather">
-        <span></span>
-        <span></span>
+    <div id="bg"></div>
+    <div id="wrap">
+        <h2 id="clock">00:00</h2>
+        <form id="login-form" class="hidden">
+            <input type="text" class="text" name="" id="" placeholder="What is your name?" required maxlength="15">
+            <!-- <button>Log In</button> -->
+            <input type="submit" class="submit" value="Log In">
+        </form>
+        <h1 id="greeting" class="hidden"></h1>
+        <form id="todo-form">
+            <input type="text" class="text" placeholder="Write a To do and Press Enter" required />
+        </form>
+        <ul id="todo-list">
+            <!-- <li>
+                <span>text</span>
+                <button>X</button>
+            </li> -->
+        </ul>
+        <div id="quote">
+            <span></span>
+            <span></span>
+        </div>
+        <div id="weather">
+            <span></span>
+            <span></span>
+        </div>
     </div>
     <!-- <img src="../chrome-app/images/1.png" alt=""> -->
     <script type="text/javascript" src="js/greeting.js"></script>
