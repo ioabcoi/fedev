@@ -272,6 +272,10 @@ input::placeholder {
         --margin-xsmall: 0.1rem;
     }
 
+    .submit {
+        font-size: var(--font-size-small);
+    }
+
     #quote,
     #weather {
         font-size: var(--font-size-xsmall);
