@@ -6,10 +6,10 @@
     --color-black: #000;
 
     /* font */
-    --font-size-large: 165px;
-    --font-size-medium: 100px;
-    --font-size-small: 35px;
-    --font-size-xsmall: 15px;
+    --font-size-large: 10rem;
+    --font-size-medium: 5rem;
+    --font-size-small: 2rem;
+    --font-size-xsmall: 1rem;
 
     /* width */
     --width-large: 35rem;
@@ -18,7 +18,7 @@
     --width-xsmall: 5rem;
 
     /* margin */
-    --margin-large: 12rem;
+    --margin-large: 10rem;
     --margin-medium: 6rem;
     --margin-small: 0.8rem;
     --margin-xsmall: 0.4rem;
@@ -41,6 +41,7 @@ body {
     background-color: var(--color-black);
     color: var(--color-white);
     text-align: center;
+    line-height: 1.5;
 }
 
 h1,
@@ -164,22 +165,27 @@ input::placeholder {
 }
 
 #login-form {
+    width: var(--width-large);
     margin-bottom: var(--margin-medium);
 }
 
-#login-form .text {
-    width: var(--width-medium);
+#todo-form {
+    width: var(--width-large);
 }
 
 #todo-form .text {
-    width: var(--width-large);
     padding: var(--margin-small) 0;
     border-bottom: 1px solid var(--color-white);
 }
 
 #todo-list {
     width: var(--width-large);
+    font-size: var(--font-size-xsmall);
     text-align: left;
+}
+
+#todo-list li {
+    margin-bottom: 5px;
 }
 
 #todo-list li button {
@@ -189,6 +195,7 @@ input::placeholder {
     width: 30px;
     height: 30px;
     margin-left: var(--margin-small);
+    font-size: var(--font-size-xsmall);
     cursor: pointer;
 }
 
@@ -208,4 +215,70 @@ input::placeholder {
     margin: var(--margin-small);
     font-size: var(--font-size-xsmall);
     text-align: right;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    :root {
+        --font-size-large: 6rem;
+        --font-size-medium: 3rem;
+        --font-size-small: 1rem;
+        --font-size-xsmall: 0.8rem;
+
+        --width-large: 90%;
+        --width-medium: 90%;
+        --width-small: 60%;
+        --width-xsmall: 50%;
+
+        --margin-large: 4rem;
+        --margin-medium: 3rem;
+        --margin-small: 0.6rem;
+        --margin-xsmall: 0.2rem;
+    }
+
+    #wrap {
+        padding: 1rem;
+    }
+
+    #clock {
+        margin-bottom: var(--margin-medium);
+    }
+
+    #todo-list {
+        width: 90%;
+    }
+
+    #todo-list li button {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Small Screens */
+@media (max-width: 480px) {
+    :root {
+        --font-size-large: 3rem;
+        --font-size-medium: 2rem;
+        --font-size-small: 0.8rem;
+        --font-size-xsmall: 0.6rem;
+
+        --margin-large: 3rem;
+        --margin-medium: 2rem;
+        --margin-small: 0.4rem;
+        --margin-xsmall: 0.1rem;
+    }
+
+    #quote,
+    #weather {
+        font-size: var(--font-size-xsmall);
+    }
+
+    #todo-list {
+        padding: var(--margin-xsmall);
+    }
+
+    #todo-list li button {
+        width: 13px;
+        height: 13px;
+    }
 }
