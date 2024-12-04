@@ -234,7 +234,7 @@ input::placeholder {
 
         --margin-large: 4rem;
         --margin-medium: 3rem;
-        --margin-small: 0.6rem;
+        --margin-small: 0.8rem;
         --margin-xsmall: 0.2rem;
     }
 
@@ -268,11 +268,12 @@ input::placeholder {
 
         --margin-large: 3rem;
         --margin-medium: 2rem;
-        --margin-small: 0.4rem;
+        --margin-small: 0.6rem;
         --margin-xsmall: 0.1rem;
     }
 
     .submit {
+        padding: var(--margin-small);
         font-size: var(--font-size-small);
     }
 
