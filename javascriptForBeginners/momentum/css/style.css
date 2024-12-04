@@ -249,6 +249,7 @@ input::placeholder {
     #todo-list {
         width: 90%;
         padding: var(--margin-small);
+        font-size: var(--font-size-small);
     }
 
     #todo-list li button {
@@ -275,7 +276,13 @@ input::placeholder {
     #weather {
         font-size: var(--font-size-xsmall);
     }
-    
+
+    #todo-list {
+        width: 90%;
+        padding: var(--margin-small);
+        font-size: var(--font-size-small);
+    }
+
     #todo-list li button {
         width: 13px;
         height: 13px;
